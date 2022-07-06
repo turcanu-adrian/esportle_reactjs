@@ -1,0 +1,134 @@
+@import url("fonts.css");
+@import url("autocomplete.css");
+@import url("guesses.css");
+
+
+h1 {
+	font-family: Helvetica85;
+	color: #5d79ae;
+}
+body{
+    font-family: Helvetica85;
+	background-color:#f5f2ec;
+	color: #313131;	
+	margin: 0;
+
+}
+
+h1 {
+	text-align:center;
+}
+
+
+.top-bar {
+	display:flex;
+	background-color:#272e6f;
+	width:100%;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	justify-content: center;	
+	font-family: Helvetica85;
+	font-size: 14px;
+	letter-spacing: 2px;
+	color: white;	
+	padding: 20px;
+}
+
+.top-bar span{
+	cursor: pointer;
+}
+
+.bottom-bar {
+	position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+	display:flex;
+	background-color:#272e6f;
+	height:120px;
+	width:100%;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	justify-content:center;
+	align-content: center;
+	font-family: Helvetica85;
+	font-size: 14px;
+	letter-spacing: 2px;
+	color: white;
+}
+
+.gametitle {
+	width: 300px;
+	margin-left:auto;
+	margin-right:auto;
+	display: flex;
+	color:white;
+	font-size: 300%;
+	align-items: center;
+	justify-content: center;
+	font-family: Helvetica85;
+	margin-top:50px;
+	margin-bottom:50px;
+	border-radius: 15px;
+	letter-spacing: 2px;	
+	border: 3px solid;
+	box-shadow: 0 0 10px black;		
+	background: linear-gradient(to right, #272e6f 50% , #f99d1c 50%);
+}
+
+
+.maingame {
+	width:70%;
+	min-width:900px;
+	letter-spacing: 1px;
+	margin-left:auto;
+	margin-right:auto;	
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a:link {
+	color: inherit;
+}
+
+a:visited {
+	color:inherit;
+}
+
+a:hover {
+	color: inherit;
+}
+
+a:active {
+	color: inherit;
+}
+
+
+#discord {
+	position:fixed;
+	bottom: 1em;
+	left:1em;
+	height:100px;
+	width:100px;
+}
+
+.statsmodal {
+	width:500px;
+}
+
+
+.gameovermodal {
+	text-align: center;
+	width:400px;
+}
+
+.gameovermodal img {
+	max-width:300px;
+	max-height:200px;
+	width:auto;
+	height:auto;
+}

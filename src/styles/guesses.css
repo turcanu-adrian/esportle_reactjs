@@ -1,0 +1,115 @@
+@keyframes fadein
+{
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+.guesses {
+	  position: relative;
+	  display: 	block;
+	  margin-left:auto;
+	  margin-right:auto;
+	  width:100%;
+	  height:460px;
+	  overflow-y: overlay;
+	  overflow-x:overflow;
+	  z-index:1;
+  }
+  
+
+.guess {
+	display: flex;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	justify-content:center;
+	align-items:center;
+	height:	50px;
+	border-top: 3px solid;
+	z-index:1;
+}
+
+.text-block {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	height:100%;
+	background-color:#d9d7d2;
+	margin: 1px;
+	color: #313131;
+	opacity: 0;
+	animation-name: fadein;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	z-index:1;
+}
+
+.text-block img {
+	max-width:43px;
+	height:auto;
+	width:auto;
+	float:left;
+}
+
+
+.guess .text-block:nth-child(1) { width:60%; line-height:43px; padding-left: 5px; margin-left: 0;}		
+.guess .text-block:nth-child(2) { animation-delay:0.125s; width:40%;}
+.guess .text-block:nth-child(3) { animation-delay:0.25s; width:40%;}
+.guess .text-block:nth-child(4) { animation-delay:0.375s; width: 40%;white-space: pre-wrap;}
+.guess .text-block:nth-child(5) { animation-delay:0.5s;width:15%;white-space: pre-wrap;}
+.guess .text-block:nth-child(6) { animation-delay:0.65s;width:20%;white-space: pre-wrap;}
+.guess .text-block:nth-child(7) { animation-delay:0.725s;width:80%;}
+
+
+
+
+
+.guessesheader-cell .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  background-color: #3a3a3c;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-size: 70%;
+  text-align: center;
+  word-spacing: normal;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+
+
+}
+
+.guessesheader-cell:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+.guessesheader {
+	display: flex;
+	width:100%;
+	font-family: Helvetica85;
+	border-bottom: 2px solid;
+}
+
+.guessesheader-cell {
+	display: flex;	
+	text-align: center;
+	flex-direction: column;
+	word-spacing: 100px;
+	margin: 1px;
+}
+
+.guessesheader-cell span{
+	margin-top:auto;
+}
+
+.guessesheader-cell:nth-child(1) { width:60%;}		
+.guessesheader-cell:nth-child(2) { width:40%;}
+.guessesheader-cell:nth-child(3) { width:40%;}
+.guessesheader-cell:nth-child(4) { width:40%;}
+.guessesheader-cell:nth-child(5) { width:15%;}
+.guessesheader-cell:nth-child(6) { width:20%;}
+.guessesheader-cell:nth-child(7) { width:80%;}

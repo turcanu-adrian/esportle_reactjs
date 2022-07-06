@@ -1,0 +1,19 @@
+@font-face {
+	font-family: Helvetica85;
+	src: url(NeueHelveticaBQ-Bold.otf); 
+}
+
+@font-face {
+	font-family: TungstenBold;
+	src: url(Tungsten-Bold.ttf);
+}
+
+@font-face {
+	font-family: AkiraExpanded;
+	src: url(AkiraExpanded.otf);
+}
+
+@font-face {
+	font-family: CSRegular;
+	src: url(cs_regular.ttf);
+}
