@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/esportle_reactjs/static/css/main.26bfb4fe.css",
-    "main.js": "/esportle_reactjs/static/js/main.a101cc7f.js",
+    "main.css": "/esportle_reactjs/static/css/main.92fec6ff.css",
+    "main.js": "/esportle_reactjs/static/js/main.e3202177.js",
     "static/media/Movistar Riders.png": "/esportle_reactjs/static/media/Movistar Riders.d703559a125deca0b196.png",
     "static/media/FaZe.png": "/esportle_reactjs/static/media/FaZe.f1686b878985d5f8db5e.png",
     "static/media/G2.png": "/esportle_reactjs/static/media/G2.d4670b09faa048f7953a.png",
@@ -15,6 +15,8 @@
     "static/media/Liquid.png": "/esportle_reactjs/static/media/Liquid.ed409f841d8935eee3b1.png",
     "static/media/Bad News Eagles.png": "/esportle_reactjs/static/media/Bad News Eagles.0c21d2940e3cc69f8390.png",
     "static/media/Heroic.png": "/esportle_reactjs/static/media/Heroic.1a4e783423e1707b23ae.png",
+    "static/media/stratum2medium.ttf": "/esportle_reactjs/static/media/stratum2medium.638e9075322d4d97d0f6.ttf",
+    "static/media/stratum2bold.ttf": "/esportle_reactjs/static/media/stratum2bold.6c13bece1e4d6ad1bc50.ttf",
     "static/media/cs_regular.ttf": "/esportle_reactjs/static/media/cs_regular.3e6e63e5df47125825fe.ttf",
     "static/media/paiN.png": "/esportle_reactjs/static/media/paiN.3c654aa14c54a43c3e03.png",
     "static/media/OG.png": "/esportle_reactjs/static/media/OG.241b89750ce420bc6edc.png",
@@ -35,11 +37,11 @@
     "static/media/Endpoint.png": "/esportle_reactjs/static/media/Endpoint.36648c85839239bc3e5d.png",
     "static/media/Cloud9.png": "/esportle_reactjs/static/media/Cloud9.ee233fab7d8f3881a4b6.png",
     "index.html": "/esportle_reactjs/index.html",
-    "main.26bfb4fe.css.map": "/esportle_reactjs/static/css/main.26bfb4fe.css.map",
-    "main.a101cc7f.js.map": "/esportle_reactjs/static/js/main.a101cc7f.js.map"
+    "main.92fec6ff.css.map": "/esportle_reactjs/static/css/main.92fec6ff.css.map",
+    "main.e3202177.js.map": "/esportle_reactjs/static/js/main.e3202177.js.map"
   },
   "entrypoints": [
-    "static/css/main.26bfb4fe.css",
-    "static/js/main.a101cc7f.js"
+    "static/css/main.92fec6ff.css",
+    "static/js/main.e3202177.js"
   ]
 }
