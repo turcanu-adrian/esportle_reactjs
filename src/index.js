@@ -85,9 +85,21 @@ const GameOver = (props) =>{
 }
 
 
+
 const TopBar = () => {
   return (
     <div className='top-bar'>
+    <ImageLink 
+    href={"https://discordapp.com/users/140721278695768064/"}
+    src={"https://upload.wikimedia.org/wikipedia/commons/9/9f/Discord_icon.svg"}
+    alt={"discord"}
+    style={{maxHeight:'50px', width:'auto',height:'auto', filter:'brightness(0) saturate(100%) invert(98%) sepia(0%) saturate(7%) hue-rotate(194deg) brightness(103%) contrast(103%)'}}
+    />
+    <ImageLink 
+    href={'https://github.com/turcanu-adrian'}
+    src={'https://i.imgur.com/aoJ5ITO.png'} 
+    alt='github' 
+    style={{maxHeight:'50px', width:'auto',height:'auto'}}/>
       <StatsButton/>
       <HelpButton/>
     </div>
@@ -98,7 +110,7 @@ const TopBar = () => {
 const ImageLink = (props) =>
 {
   return (
-    <a href={props.href}><img src={props.src} id={props.id} alt={props.alt}></img></a>
+    <span href={props.href}><img src={props.src} alt={props.alt} style={props.style}></img></span>
   )
 }
 
@@ -109,8 +121,7 @@ const BottomBar = () => {
     src={"https://upload.wikimedia.org/wikipedia/commons/9/9f/Discord_icon.svg"}
     id={"discord"}
     alt={"discord"}
-    >  
-    </ImageLink>
+    />
   </div>
 }
 
@@ -153,7 +164,6 @@ class Game extends React.Component {
         <Input update={this.update} players={this.props.players}></Input>        {/*INPUT ELEMENT*/}
         <GuessesHeader />
         <Guesses answer={this.props.answer} players={this.props.players}/>
-        <BottomBar />
       </div>
       </>
     );
@@ -172,13 +182,12 @@ if (localStorage.length === 0){
 }
 
 localStorage.modalShown=false;
-
-let playersdata;
-fetch('players.json')
+console.log("FETCHING PLAYERS DATA ... ");
+fetch('https://turcanu-adrian.github.io/esportle_reactjs/players.json')
 .then(response=>response.text())
 .then(data=>{
-  playersdata = JSON.parse(data);
-  fetch('win.txt')
+  let playersdata = JSON.parse(data);
+  fetch('https://turcanu-adrian.github.io/esportle_reactjs/win.txt')
   .then (response=>response.text())
   .then (data => {
     const root = ReactDOM.createRoot(document.getElementById("root"));

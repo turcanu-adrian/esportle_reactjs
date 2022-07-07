@@ -36,12 +36,15 @@ const GuessBlock = (props) =>
 
 
 const Guess = (props)=>{
+  let guessIndex = JSON.parse(localStorage.guesses).length;
+
   return (<div className="guess">
     <GuessBlock 
       style=
       {{
-        backgroundColor: (props.data.currentTeam===props.answer.currentTeam)? '#fab24d' : (props.answer.pastTeams.includes(props.data.currentTeam)? '#3e4370' : null),
-        color: (props.data.currentTeam === props.answer.currentTeam)? null : (props.answer.pastTeams.includes(props.data.currentTeam)? 'white' : null),
+        filter: (props.data.currentTeam===props.answer.currentTeam || props.answer.pastTeams.includes(props.data.currentTeam))? 'brightness(120%)' : null,
+        backgroundColor: (props.data.currentTeam===props.answer.currentTeam)? '#466571' : (props.answer.pastTeams.includes(props.data.currentTeam)? 'rgb(108, 94, 40)' : null),
+        color: (props.data.currentTeam === props.answer.currentTeam)? '#bde2fb' : null,
       }}
       text={props.data.currentTeam} 
       img={team_logos[props.data.currentTeam + '.png']}
@@ -50,50 +53,56 @@ const Guess = (props)=>{
       text={props.data.continent}
       style=
       {{
-        backgroundColor: (props.data.continent===props.answer.continent)? '#fab24d' : null,
-        color: (props.data.continent===props.answer.continent)? null: null,
+        filter: (props.data.continent===props.answer.continent)? 'brightness(120%)' : null,
+        backgroundColor: (props.data.continent===props.answer.continent)? '#466571' : null,
+        color: (props.data.continent===props.answer.continent)? '#bde2fb': null,
       }}
     />
     <GuessBlock 
       text={props.data.country}
       style=
       {{
-        backgroundColor: (props.data.country===props.answer.country)? '#fab24d' : null,
-       //color: (props.data.country==props.answer.country)? 'white' : null,
+        filter: (props.data.country===props.answer.country)? 'brightness(120%)' : null,
+        backgroundColor: (props.data.country===props.answer.country)? '#466571' : null,
+        color: (props.data.country==props.answer.country)? '#bde2fb' : null,
       }}
     />
     <GuessBlock 
       text=
-      {props.data.earnings.toLocaleString('en-US', {style:'currency', currency:'USD', maximumFractionDigits: '0'})  + ((Math.abs(props.data.earnings-props.answer.earnings)<=50000 && props.data.earnings!==props.answer.earnings)? ((props.data.earnings>props.answer.earnings)? "\n▼" : "\n▲"): '')}
+      {props.data.earnings.toLocaleString('en-US', {style:'currency', currency:'USD', maximumFractionDigits: '0'})  + ((Math.abs(props.data.earnings-props.answer.earnings)<=50000 && props.data.earnings!==props.answer.earnings)? ((props.data.earnings>props.answer.earnings)? "▼" : "▲"): '')}
       style=
       {{
-        backgroundColor: (props.data.earnings===props.answer.earnings)? '#fab24d' : (Math.abs(props.data.earnings-props.answer.earnings)<=50000)? '#3e4370' : null,
-        color: (props.data.earnings===props.answer.earnings)? null : (Math.abs(props.data.earnings-props.answer.earnings)<=50000)? 'white' : null,
+        filter: (Math.abs(props.data.earnings-props.answer.earnings)<=50000)? 'brightness(120%)' : null,
+        backgroundColor: (props.data.earnings===props.answer.earnings)? '#466571' : (Math.abs(props.data.earnings-props.answer.earnings)<=50000)? 'rgb(108, 94, 40)' : null,
+        color: (props.data.earnings===props.answer.earnings)? '#bde2fb' : null,
       }}
     />
     <GuessBlock 
-      text={props.data.age + ((Math.abs(props.data.age-props.answer.age)<=2 && props.data.age!==props.answer.age)? ((props.data.age>props.answer.age)? "\n▼" : "\n▲"): '')}
+      text={props.data.age + ((Math.abs(props.data.age-props.answer.age)<=2 && props.data.age!==props.answer.age)? ((props.data.age>props.answer.age)? "▼" : "▲"): '')}
       style=
       {{
-        backgroundColor: (props.data.age===props.answer.age)? '#fab24d' : (Math.abs(props.data.age-props.answer.age)<=2)? '#3e4370' : null,
-        color: (props.data.age===props.answer.age)? null : (Math.abs(props.data.age-props.answer.age)<=2)? 'white' : null,
+        filter: (Math.abs(props.data.age-props.answer.age)<=2)? 'brightness(120%)' : null,
+        backgroundColor: (props.data.age===props.answer.age)? '#466571' : (Math.abs(props.data.age-props.answer.age)<=2)? 'rgb(108, 94, 40)' : null,
+        color: (props.data.age===props.answer.age)? '#bde2fb':null,
       }}
 
     />
     <GuessBlock 
-      text={props.data.rating + '\n' + ((Math.abs(props.data.rating-props.answer.rating)<=0.05 && props.data.rating!==props.answer.rating)? ((props.data.rating>props.answer.rating)? "▼" : "▲"): '')}
+      text={props.data.rating  + ((Math.abs(props.data.rating-props.answer.rating)<=0.05 && props.data.rating!==props.answer.rating)? ((props.data.rating>props.answer.rating)? "▼" : "▲"): '')}
       style=
       {{
-        backgroundColor: (props.data.rating===props.answer.rating)? '#fab24d' : (Math.abs(props.data.rating-props.answer.rating)<=0.05)? '#3e4370' : null,
-        color: (props.data.rating===props.answer.rating)? null : (Math.abs(props.data.rating-props.answer.rating)<=0.05)? 'white' : null,
-      }}
-    />
+        filter: (Math.abs(props.data.rating-props.answer.rating)<=0.05)? 'brightness(120%)' : null,
+        backgroundColor: (props.data.rating===props.answer.rating)? '#466571' : (Math.abs(props.data.rating-props.answer.rating)<=0.05)? 'rgb(108, 94, 40)' : null,
+        color: (props.data.rating===props.answer.rating)? '#bde2fb' : null,
+        }}
+      />
     <GuessBlock 
       text={props.data.fullname}
       style=
       {{
-        backgroundColor: (props.data.fullname===props.answer.fullname)? '#fab24d ' : null,
-       //color: (props.data.fullname==props.answer.fullname)? 'white' : null,
+        filter: (props.data.fullname===props.answer.fullname)? 'brightness(120%)' : null,
+        backgroundColor: (props.data.fullname===props.answer.fullname)? '#466571' : null,
+        color: (props.data.fullname==props.answer.fullname)? '#bde2fb' : null,
       }}
       />
   </div>)

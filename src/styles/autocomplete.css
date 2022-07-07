@@ -1,5 +1,6 @@
 /* AUTOCOMPLETE */
 .autocomplete {
+  margin-bottom:10px;
   /*the container must be positioned relative:*/
   position: relative;
   display: 	block;

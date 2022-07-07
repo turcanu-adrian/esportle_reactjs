@@ -10,10 +10,14 @@
 	  margin-left:auto;
 	  margin-right:auto;
 	  width:100%;
-	  height:460px;
 	  overflow-y: overlay;
 	  overflow-x:overflow;
 	  z-index:1;
+	  font-family: Stratum2Medium;
+	  background-color: rgb(54, 56, 54, 0.3);
+	  padding-left: 20px;
+	  padding-right: 20px;
+	  padding-bottom: 20px;
   }
   
 
@@ -24,7 +28,7 @@
 	justify-content:center;
 	align-items:center;
 	height:	50px;
-	border-top: 3px solid;
+	margin-bottom: 2px;
 	z-index:1;
 }
 
@@ -35,14 +39,14 @@
 	flex-direction: column;
 	width: 100%;
 	height:100%;
-	background-color:#d9d7d2;
-	margin: 1px;
-	color: #313131;
+	background-color:rgb(66, 72, 77, 0.8);
+	color: #ffe188; /* CT TEXT COLOR #bde2fb  T TEXT COLOR #ffe188*/
 	opacity: 0;
 	animation-name: fadein;
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
 	z-index:1;
+	font-size:150%;
 }
 
 .text-block img {
@@ -53,15 +57,25 @@
 }
 
 
-.guess .text-block:nth-child(1) { width:60%; line-height:43px; padding-left: 5px; margin-left: 0;}		
+.guess .text-block:nth-child(1) { width:40%; line-height:43px; padding-left: 5px;}		
 .guess .text-block:nth-child(2) { animation-delay:0.125s; width:40%;}
 .guess .text-block:nth-child(3) { animation-delay:0.25s; width:40%;}
 .guess .text-block:nth-child(4) { animation-delay:0.375s; width: 40%;white-space: pre-wrap;}
 .guess .text-block:nth-child(5) { animation-delay:0.5s;width:15%;white-space: pre-wrap;}
 .guess .text-block:nth-child(6) { animation-delay:0.65s;width:20%;white-space: pre-wrap;}
-.guess .text-block:nth-child(7) { animation-delay:0.725s;width:80%;}
+.guess .text-block:nth-child(7) { animation-delay:0.725s;width:80%; margin-right: 0px;}
 
 
+.guess .text-block:nth-child(2n){
+	background-color: rgb(55, 57, 61, 0.8);
+}
+.guess:nth-child(2n) .text-block{
+	color: #ffe188;
+}
+
+.guess .text-block span {
+	opacity: 1 !important;
+}
 
 
 
@@ -90,8 +104,12 @@
 .guessesheader {
 	display: flex;
 	width:100%;
-	font-family: Helvetica85;
-	border-bottom: 2px solid;
+	font-family: Stratum2Medium;
+	font-size: 120%;
+	background-color: rgb(54, 56, 54, 0.3);
+	padding-left: 20px;
+	padding-right: 20px;
+	color: #a2a2a2;
 }
 
 .guessesheader-cell {
@@ -104,9 +122,10 @@
 
 .guessesheader-cell span{
 	margin-top:auto;
+	filter: brightness(150%);
 }
 
-.guessesheader-cell:nth-child(1) { width:60%;}		
+.guessesheader-cell:nth-child(1) { width:40%;padding-left: 5px;}		
 .guessesheader-cell:nth-child(2) { width:40%;}
 .guessesheader-cell:nth-child(3) { width:40%;}
 .guessesheader-cell:nth-child(4) { width:40%;}
