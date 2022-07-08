@@ -12,7 +12,7 @@
 	}
 	
 	.top-bar {
-		font-size: 1.5vw;
+		font-size: 3vh;
 	}
 	
 
@@ -51,10 +51,11 @@
 	}
 
 	.text-block img {
-		max-height: 2em;
+		max-height: 1.5em;
+		float: left;
 	}
 
-	.guessesheader-cell:nth-child(1) { width:20%;}		
+	.guessesheader-cell:nth-child(1) { width:20%; }		
 	.guessesheader-cell:nth-child(2) { width:14%;}
 	.guessesheader-cell:nth-child(3) { width:15%;}
 	.guessesheader-cell:nth-child(4) { width:10%;}
@@ -63,7 +64,7 @@
 	.guessesheader-cell:nth-child(7) { width:24%;}
 
 
-
+	.guess .text-block:nth-child(1) span{width:70%;}
 	.guess .text-block:nth-child(1) { width:20%;}		
 	.guess .text-block:nth-child(2) { animation-delay:0.125s; width:14%;}
 	.guess .text-block:nth-child(3) { animation-delay:0.25s; width:15%;}
@@ -72,6 +73,40 @@
 	.guess .text-block:nth-child(6) { animation-delay:0.65s;width:8.5%; word-spacing: initial;}
 	.guess .text-block:nth-child(7) { animation-delay:0.725s;width:24%;}
 
+
+	.gameovermodal {
+		font-size: 2vw;
+		width: 15em;
+		height:15em;
+		margin-left:auto;
+		margin-right:auto;
+		text-align: center;
+	}
+	
+	.gameovermodal .modal-content{
+		margin-left:0;
+		margin-right:0;
+		font-family: Stratum2Medium;
+		color: white;
+		background: none;
+		opacity: 1;
+		backdrop-filter: blur(15px);
+	}
+	.gameovermodal .modal-content p:nth-child(4) span{
+		font-family: Stratum2Bold;
+		position: relative;
+		font-size: 150%;
+		bottom: 0.5em;
+		left: 0.2em;
+	}
+	
+	
+	.gameovermodal img{
+		background-color: white;
+		border-left: solid 0.5em lightgreen;
+		height: 4em;
+		width:auto;
+	}
 }
 
 body{

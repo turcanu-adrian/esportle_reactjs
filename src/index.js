@@ -71,11 +71,12 @@ const GameOver = (props) =>{
   return (<>
       <Modal show={show} onHide={handleClose} centered dialogClassName="gameovermodal">
         <Modal.Body>
-        <img src={'https://prosettings.net/acd-cgi/img/v1/wp-content/uploads/' + props.answer.name.toLowerCase() + '.png'} alt='avatar'></img><br/>
+        
         <span>{(localStorage.currentStreak === '0')? 'NT!' : 'GG WP!'}</span><br/>
-        <span>THE RIGHT ANSWER WAS <br/>{props.answer.fullname}</span><br/>
-        <span>{(localStorage.currentStreak === '0')? 'GL HF TOMORROW!' : 'YOU SOLVED IT IN ' + JSON.parse(localStorage.guesses).length + ' GUESS' 
-        + (JSON.parse(localStorage.guesses).length===1? '!' : 'ES!')}</span><br/>
+        <p>THE RIGHT ANSWER WAS</p>
+        <p><img src={'https://prosettings.net/acd-cgi/img/v1/wp-content/uploads/' + props.answer.name.toLowerCase() + '.png'} alt='avatar'></img><span>{props.answer.name}</span></p>
+        <p>{(localStorage.currentStreak === '0')? 'GL HF TOMORROW!' : 'YOU SOLVED IT IN ' + JSON.parse(localStorage.guesses).length + ' GUESS' 
+        + (JSON.parse(localStorage.guesses).length===1? '!' : 'ES!')}</p>
         <button onClick={shareScore}>SHARE MY RESULT!</button>
         </Modal.Body>
       </Modal>
@@ -169,9 +170,9 @@ class Game extends React.Component {
 // ========================================
 
 
-if (localStorage.version != '6'){
+if (localStorage.version != '7'){
   localStorage.clear();
-  localStorage.version=6;
+  localStorage.version=7;
 } 
 
 if (localStorage.length === 1){
@@ -181,7 +182,7 @@ if (localStorage.length === 1){
   localStorage.gameswon=0;
   localStorage.currentStreak=0;
   localStorage.maxStreak=0;
-  localStorage.version=6;
+  localStorage.version=7;
 }
 
 localStorage.modalShown=false;
