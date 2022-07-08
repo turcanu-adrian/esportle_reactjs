@@ -66,15 +66,14 @@ const GameOver = (props) =>{
 		copyText +="\n";
 	}
   navigator.clipboard.writeText(copyText); 
+  alert("RESULT COPIED TO CLIPBOARD");
   }
 
   return (<>
       <Modal show={show} onHide={handleClose} centered dialogClassName="gameovermodal">
         <Modal.Body>
-        
-        <span>{(localStorage.currentStreak === '0')? 'NT!' : 'GG WP!'}</span><br/>
-        <p>THE RIGHT ANSWER WAS</p>
-        <p><img src={'https://prosettings.net/acd-cgi/img/v1/wp-content/uploads/' + props.answer.name.toLowerCase() + '.png'} alt='avatar'></img><span>{props.answer.name}</span></p>
+        <p>{(localStorage.currentStreak === '0')? 'NT!' : 'GG WP!'}</p>
+        <div className="rightAnswer"><img src={'https://prosettings.net/acd-cgi/img/v1/wp-content/uploads/' + props.answer.name.toLowerCase() + '.png'} alt='avatar'></img><p>{props.answer.name}</p><p>  was the answer</p></div>
         <p>{(localStorage.currentStreak === '0')? 'GL HF TOMORROW!' : 'YOU SOLVED IT IN ' + JSON.parse(localStorage.guesses).length + ' GUESS' 
         + (JSON.parse(localStorage.guesses).length===1? '!' : 'ES!')}</p>
         <button onClick={shareScore}>SHARE MY RESULT!</button>

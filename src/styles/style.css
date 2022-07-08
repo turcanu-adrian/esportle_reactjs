@@ -79,33 +79,51 @@
 	}
 	
 	.gameovermodal .modal-content{
-		font-size: 100%;
 		font-family: NotoSans;
 		color: white;
 		background: none;
 		opacity: 1;
 		backdrop-filter: blur(15px);
 	}
-	.gameovermodal .modal-content p:nth-child(4) span{
-		font-family: Stratum2Bold;
-		position: relative;
-		font-size: 150%;
-	}
-	
 	
 	.gameovermodal img{
-		background-color: white;
-		border-left: solid 0.5em lightgreen;
-		height: 4em;
+		max-height: 3em;
 		width:auto;
+		box-shadow: 0 0 0 0 2em black;
 	}
+
+	.gameovermodal .rightAnswer {
+		display: inline-block;
+		height: 3em;
+		margin-bottom: 0.1em;
+		text-indent: 10px;
+		line-height: 1.5em;
+		width: 70%;
+		text-align: justify;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 100%;
+		font-family: Stratum2Bold;
+	}
+
+	.gameovermodal .rightAnswer p:nth-child(2){
+		margin-bottom: 0;
+		text-shadow: 0 0 0.5em black;
+	}
+
+	.gameovermodal .rightAnswer p:nth-child(3){
+		font-family: NotoSansThin;
+		font-size: 80%;
+		margin-bottom: 0;
+	}
+
 }
 
 body{
     font-family: Helvetica85;
 	background-color:#f5f2ec;
 	color: #313131;
-	background-image: url('https://i.imgur.com/Mmyk3uY.png');
+	background-image: url('https://qu.ax/yEh.webp');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;

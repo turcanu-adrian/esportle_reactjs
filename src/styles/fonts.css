@@ -24,3 +24,8 @@
 	font-family: NotoSans;
 	src: url(NotoSansDisplay-Medium.ttf);
 }
+
+@font-face {
+	font-family: NotoSansThin;
+	src: url(NotoSans-Thin.ttf);
+}

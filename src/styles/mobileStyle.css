@@ -71,24 +71,41 @@
 }
 
 .gameovermodal .modal-content{
-	font-family: Stratum2Medium;
+	font-family: NotoSans;
 	color: white;
 	background: none;
 	opacity: 1;
 	backdrop-filter: blur(15px);
 }
-.gameovermodal .modal-content p:nth-child(4) span{
-	font-size: 200%;
-	font-family: Stratum2Bold;
-	position: relative;
-	bottom: 0.5em;
-	left: 0.2em;
-}
 
 .gameovermodal img{
-	background-color: white;
-	border-left: solid 4px lightgreen;
-	height: 5em;
+	max-height: 3em;
 	width:auto;
+	float: left;
+	background-color: white;
+	border-left: 0.5em solid green;
+	box-shadow: 0 0 0.5em black;
 }
+
+.gameovermodal .rightAnswer {
+	text-indent: 10px;
+	line-height: 1.5em;
+	width: 80%;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 100%;
+	font-family: Stratum2Bold;
+}
+
+	.gameovermodal .rightAnswer p:nth-child(2){
+		margin-bottom: 0;
+		box-shadow: 1em;
+	}
+
+	.gameovermodal .rightAnswer p:nth-child(3){
+		font-family: NotoSansThin;
+		font-size: 80%;
+		margin-bottom: 0;
+	}
 
