@@ -90,22 +90,23 @@
 .gameovermodal .rightAnswer {
 	text-indent: 10px;
 	line-height: 1.5em;
-	width: 80%;
-	text-align: left;
+	width: 70%;
+	margin-bottom: 0.1em;
+	text-align: justify;
 	margin-left: auto;
 	margin-right: auto;
 	font-size: 100%;
 	font-family: Stratum2Bold;
 }
 
-	.gameovermodal .rightAnswer p:nth-child(2){
-		margin-bottom: 0;
-		box-shadow: 1em;
-	}
+.gameovermodal .rightAnswer p:nth-child(2){
+	margin-bottom: 0;
+	text-shadow: 0 0 0.5em black;
+}
 
-	.gameovermodal .rightAnswer p:nth-child(3){
-		font-family: NotoSansThin;
-		font-size: 80%;
-		margin-bottom: 0;
-	}
+.gameovermodal .rightAnswer p:nth-child(3){
+	font-family: NotoSansThin;
+	font-size: 80%;
+	margin-bottom: 0;
+}
 
