@@ -51,15 +51,15 @@ const GameOver = (props) =>{
   },[localStorage.gameOver]);
 
   const shareScore = () =>{
-    let copyText = 'ESPORTLE ' +  + '/8' + '\n\n';
+    let copyText = 'ESPORTLE ' + JSON.parse(localStorage.guesses).length + '/8' + '\n\n';
     for (let i=0;i<JSON.parse(localStorage.guesses).length;i++)
 	  {
 		for (let j=0; j<6;j++)
 		{
-			if (document.getElementsByClassName("guess")[i].getElementsByClassName("text-block")[j].style.backgroundColor === "rgb(250, 178, 77)")
-				copyText += "🟩";
-			else if (document.getElementsByClassName("guess")[i].getElementsByClassName("text-block")[j].style.backgroundColor === "rgb(62, 67, 112)")
-				copyText += "🟨";
+			if (document.getElementsByClassName("guess")[i].getElementsByClassName("text-block")[j].style.backgroundColor === 'rgb(70, 101, 113)')
+				copyText += "🟦";
+			else if (document.getElementsByClassName("guess")[i].getElementsByClassName("text-block")[j].style.backgroundColor === "rgb(108, 94, 40)")
+				copyText += "🟧";
 			else
 				copyText+= "⬛";
 		  }
@@ -75,8 +75,7 @@ const GameOver = (props) =>{
         <span>{(localStorage.currentStreak === '0')? 'NT!' : 'GG WP!'}</span><br/>
         <span>THE RIGHT ANSWER WAS <br/>{props.answer.fullname}</span><br/>
         <span>{(localStorage.currentStreak === '0')? 'GL HF TOMORROW!' : 'YOU SOLVED IT IN ' + JSON.parse(localStorage.guesses).length + ' GUESS' 
-        + (JSON.parse(localStorage.guesses).length===1? '!' : 'ES!')
-        }</span><br/>
+        + (JSON.parse(localStorage.guesses).length===1? '!' : 'ES!')}</span><br/>
         <button onClick={shareScore}>SHARE MY RESULT!</button>
         </Modal.Body>
       </Modal>
@@ -93,13 +92,13 @@ const TopBar = () => {
     href={"https://discordapp.com/users/140721278695768064/"}
     src={"https://upload.wikimedia.org/wikipedia/commons/9/9f/Discord_icon.svg"}
     alt={"discord"}
-    style={{maxHeight:'50px', width:'auto',height:'auto', filter:'brightness(0) saturate(100%) invert(98%) sepia(0%) saturate(7%) hue-rotate(194deg) brightness(103%) contrast(103%)'}}
+    style={{maxHeight:'1em', width:'auto',height:'auto', filter:'brightness(0) saturate(100%) invert(98%) sepia(0%) saturate(7%) hue-rotate(194deg) brightness(103%) contrast(103%)'}}
     />
     <ImageLink 
     href={'https://github.com/turcanu-adrian'}
     src={'https://i.imgur.com/aoJ5ITO.png'} 
     alt='github' 
-    style={{maxHeight:'50px', width:'auto',height:'auto'}}/>
+    style={{maxHeight:'1em', width:'auto',height:'auto'}}/>
       <StatsButton/>
       <HelpButton/>
     </div>
@@ -112,17 +111,6 @@ const ImageLink = (props) =>
   return (
     <span href={props.href}><img src={props.src} alt={props.alt} style={props.style}></img></span>
   )
-}
-
-const BottomBar = () => {
-  return <div className="bottom-bar">
-    <ImageLink 
-    href={"https://discordapp.com/users/140721278695768064/"}
-    src={"https://upload.wikimedia.org/wikipedia/commons/9/9f/Discord_icon.svg"}
-    id={"discord"}
-    alt={"discord"}
-    />
-  </div>
 }
 
 const Input = (props) =>{
@@ -179,6 +167,12 @@ if (localStorage.length === 0){
   localStorage.gameswon=0;
   localStorage.currentStreak=0;
   localStorage.maxStreak=0;
+  localStorage.version=1;
+}
+
+if (localStorage.version==null || localStorage.version != '1'){
+  localStorage.clear();
+  localStorage.version=1;
 }
 
 localStorage.modalShown=false;

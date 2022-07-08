@@ -32,12 +32,12 @@ class Autocomplete extends React.Component {
 
     onClick = e => {
         const { activeSuggestion, filteredSuggestions} = this.state;
-         let guess = filteredSuggestions[activeSuggestion];
+         let guess = e.currentTarget.innerText;
         this.setState({
           activeSuggestion: 0,
           filteredSuggestions: [],
           showSuggestions: false,
-          userInput: e.currentTarget.innerText
+          userInput: ''
         });
         if (guess!=null)
           this.addGuess(guess);

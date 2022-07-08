@@ -22,7 +22,7 @@ const GuessesHeader = () =>{
     <GuessesHeaderCell value={"COUNTRY"}></GuessesHeaderCell>
     <GuessesHeaderCell value={"EARNINGS"}></GuessesHeaderCell>
     <GuessesHeaderCell value={"AGE"}></GuessesHeaderCell>
-    <GuessesHeaderCell value={"HLTV RATING"}></GuessesHeaderCell>
+    <GuessesHeaderCell value={"RATING"}></GuessesHeaderCell>
     <GuessesHeaderCell value={"NAME"}></GuessesHeaderCell>
     </div>
   );
@@ -30,7 +30,7 @@ const GuessesHeader = () =>{
 
 const GuessBlock = (props) =>
 { 
-  return <div style={props.style} className='text-block'><span><img src={props.img} alt=''/>{props.text}</span></div>
+  return <div style={props.style} className='text-block'><img src={props.img} alt=''/><span>{props.text}</span></div>
  
 }
 
@@ -46,7 +46,7 @@ const Guess = (props)=>{
         backgroundColor: (props.data.currentTeam===props.answer.currentTeam)? '#466571' : (props.answer.pastTeams.includes(props.data.currentTeam)? 'rgb(108, 94, 40)' : null),
         color: (props.data.currentTeam === props.answer.currentTeam)? '#bde2fb' : null,
       }}
-      text={props.data.currentTeam} 
+      text={'\n'+props.data.currentTeam} 
       img={team_logos[props.data.currentTeam + '.png']}
     />
     <GuessBlock 
@@ -69,7 +69,7 @@ const Guess = (props)=>{
     />
     <GuessBlock 
       text=
-      {props.data.earnings.toLocaleString('en-US', {style:'currency', currency:'USD', maximumFractionDigits: '0'})  + ((Math.abs(props.data.earnings-props.answer.earnings)<=50000 && props.data.earnings!==props.answer.earnings)? ((props.data.earnings>props.answer.earnings)? "▼" : "▲"): '')}
+      {(props.data.earnings/1000).toLocaleString('en-US', {style:'currency', currency:'USD', maximumFractionDigits: '0'}) +'k' + ((Math.abs(props.data.earnings-props.answer.earnings)<=50000 && props.data.earnings!==props.answer.earnings)? ((props.data.earnings>props.answer.earnings)? "\n▼" : "\n▲"): '')}
       style=
       {{
         filter: (Math.abs(props.data.earnings-props.answer.earnings)<=50000)? 'brightness(120%)' : null,
@@ -78,7 +78,7 @@ const Guess = (props)=>{
       }}
     />
     <GuessBlock 
-      text={props.data.age + ((Math.abs(props.data.age-props.answer.age)<=2 && props.data.age!==props.answer.age)? ((props.data.age>props.answer.age)? "▼" : "▲"): '')}
+      text={props.data.age + ((Math.abs(props.data.age-props.answer.age)<=2 && props.data.age!==props.answer.age)? ((props.data.age>props.answer.age)? "\n▼" : "\n▲"): '')}
       style=
       {{
         filter: (Math.abs(props.data.age-props.answer.age)<=2)? 'brightness(120%)' : null,
@@ -88,7 +88,7 @@ const Guess = (props)=>{
 
     />
     <GuessBlock 
-      text={props.data.rating  + ((Math.abs(props.data.rating-props.answer.rating)<=0.05 && props.data.rating!==props.answer.rating)? ((props.data.rating>props.answer.rating)? "▼" : "▲"): '')}
+      text={props.data.rating  + ((Math.abs(props.data.rating-props.answer.rating)<=0.05 && props.data.rating!==props.answer.rating)? ((props.data.rating>props.answer.rating)? "\n▼" : "\n▲"): '')}
       style=
       {{
         filter: (Math.abs(props.data.rating-props.answer.rating)<=0.05)? 'brightness(120%)' : null,

@@ -1,0 +1,105 @@
+@keyframes fadein
+{
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+.guessesheader {
+	display: flex;
+	width:100%;
+    margin-top:20%;
+	font-family: Stratum2Medium;
+	font-size: 1.5vh;
+	background-color: rgb(54, 56, 54, 0.3);
+	color: #a2a2a2;
+}
+
+.guessesheader-cell {
+	display: flex;	
+	text-align: center;
+	flex-direction: column;
+    margin-top: 0.2em;
+}
+
+.guessesheader-cell span{
+	filter: brightness(150%);
+}
+
+
+
+.guessesheader-cell:nth-child(1) { width:30%;}		
+.guessesheader-cell:nth-child(2) { width:20%;}
+.guessesheader-cell:nth-child(3) { width:25%;}
+.guessesheader-cell:nth-child(4) { width:20%;}
+.guessesheader-cell:nth-child(5) { width:10%;}
+.guessesheader-cell:nth-child(6) { width:15%;}
+.guessesheader-cell:nth-child(7) { width:20%;}
+
+
+
+.guess .text-block:nth-child(1) { width:30%;}		
+.guess .text-block:nth-child(2) { animation-delay:0.125s; width:20%;}
+.guess .text-block:nth-child(3) { animation-delay:0.25s; width:25%;}
+.guess .text-block:nth-child(4) { animation-delay:0.375s; width: 20%;}
+.guess .text-block:nth-child(5) { animation-delay:0.5s;width:10%;}
+.guess .text-block:nth-child(6) { animation-delay:0.65s;width:15%;}
+.guess .text-block:nth-child(7) { animation-delay:0.725s;width:20%;}
+
+.guesses {
+    width:100%;
+	display: block;
+	z-index:1;
+	font-family: Stratum2Medium;
+	background-color: rgb(54, 56, 54, 0.3);
+	padding-bottom: 1em;	
+}
+
+
+.guess {
+  display: flex;
+  flex-direction:row;
+  flex-wrap:nowrap;
+  justify-content:center;
+  align-items:center;
+  height: 4em;
+  margin-bottom: 0.3em;
+  z-index:1;
+  line-height: 1em;
+  font-size: 1.6vh;
+}
+
+.text-block {
+  display:flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height:100%;
+  background-color:rgb(66, 72, 77, 0.8);
+  color: #ffe188; /* CT TEXT COLOR #bde2fb  T TEXT COLOR #ffe188*/
+  opacity: 0;
+  animation-name: fadein;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  z-index:1;
+}
+
+.text-block img { 
+  max-height:2.5em;
+  height:auto;
+  width:auto;
+}
+
+.guess .text-block:nth-child(1) span {
+}
+
+
+
+
+.guess .text-block:nth-child(2n){
+  background-color: rgb(55, 57, 61, 0.8);
+}
+.guess:nth-child(2n) .text-block{
+  color: #ffe188;
+}
+
+
