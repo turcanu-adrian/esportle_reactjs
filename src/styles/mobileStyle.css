@@ -1,24 +1,24 @@
 
 .top-bar {	
 	display:flex;
-	width: 100vw;
-	height: 2em;
+	width: 100%;
+	height: 1.5em;
 	flex-direction:row;
 	flex-wrap:nowrap;
 	justify-content: center;	
+	align-items: center;
 	font-family: Helvetica85;
-	font-size: 2.8vh;
+	font-size: 3vh;
 	letter-spacing: 0.2em;
 	color: white;
 	background: linear-gradient(to right, #2a333b 10%, #404950 50%, #2a333b 90%);
 	border-top: outset 0.1em rgb(76,85,93, 0.3);
 	border-bottom: outset 0.1em rgba(76,85,93, 0.3);
+	overflow: hidden;
 }
 
 .top-bar span{
 	cursor: pointer;
-	padding-top: 0.3em;
-	padding-bottom: 0.3em;
 	padding-left:1em;
 	padding-right:1em;
 	font-family: Stratum2Medium;
@@ -39,7 +39,8 @@
     padding-top: 2.5em;
 	backdrop-filter: blur(5px) brightness(70%);
 	width:100%;
-	height:100%;
+	height:95.4vh;
+	overflow: hidden;
 }
 
 

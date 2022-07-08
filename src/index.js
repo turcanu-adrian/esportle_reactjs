@@ -92,13 +92,20 @@ const TopBar = () => {
     href={"https://discordapp.com/users/140721278695768064/"}
     src={"https://upload.wikimedia.org/wikipedia/commons/9/9f/Discord_icon.svg"}
     alt={"discord"}
-    style={{maxHeight:'1em', width:'auto',height:'auto', filter:'brightness(0) saturate(100%) invert(98%) sepia(0%) saturate(7%) hue-rotate(194deg) brightness(103%) contrast(103%)'}}
+    style={{
+      maxHeight:'1em', 
+      width:'auto',
+      height:'auto', 
+      filter:'brightness(0) saturate(100%) invert(98%) sepia(0%) saturate(7%) hue-rotate(194deg) brightness(103%) contrast(103%)'}}
     />
     <ImageLink 
     href={'https://github.com/turcanu-adrian'}
     src={'https://i.imgur.com/aoJ5ITO.png'} 
     alt='github' 
-    style={{maxHeight:'1em', width:'auto',height:'auto'}}/>
+    style={{
+      maxHeight:'1em', 
+      width:'auto',
+      height:'auto'}}/>
       <StatsButton/>
       <HelpButton/>
     </div>
@@ -109,7 +116,7 @@ const TopBar = () => {
 const ImageLink = (props) =>
 {
   return (
-    <span href={props.href}><img src={props.src} alt={props.alt} style={props.style}></img></span>
+    <span><a href={props.href}><img src={props.src} alt={props.alt} style={props.style}></img></a></span>
   )
 }
 
@@ -160,19 +167,21 @@ class Game extends React.Component {
 }
 
 // ========================================
-if (localStorage.length === 0){
+
+
+if (localStorage.version != '6'){
+  localStorage.clear();
+  localStorage.version=6;
+} 
+
+if (localStorage.length === 1){
   localStorage.guesses = JSON.stringify([]);
   localStorage.gameOver = false;
   localStorage.gamesplayed = 0;
   localStorage.gameswon=0;
   localStorage.currentStreak=0;
   localStorage.maxStreak=0;
-  localStorage.version=1;
-}
-
-if (localStorage.version==null || localStorage.version != '1'){
-  localStorage.clear();
-  localStorage.version=1;
+  localStorage.version=6;
 }
 
 localStorage.modalShown=false;

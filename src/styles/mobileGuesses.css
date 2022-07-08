@@ -9,9 +9,11 @@
 	width:100%;
     margin-top:20%;
 	font-family: Stratum2Medium;
-	font-size: 1.5vh;
+	font-size: 1.4vh;
 	background-color: rgb(54, 56, 54, 0.3);
 	color: #a2a2a2;
+    justify-content:center;
+    align-items:center;
 }
 
 .guessesheader-cell {
@@ -27,31 +29,32 @@
 
 
 
-.guessesheader-cell:nth-child(1) { width:30%;}		
-.guessesheader-cell:nth-child(2) { width:20%;}
-.guessesheader-cell:nth-child(3) { width:25%;}
-.guessesheader-cell:nth-child(4) { width:20%;}
-.guessesheader-cell:nth-child(5) { width:10%;}
-.guessesheader-cell:nth-child(6) { width:15%;}
-.guessesheader-cell:nth-child(7) { width:20%;}
+.guessesheader-cell:nth-child(1) { width:20%;}		
+.guessesheader-cell:nth-child(2) { width:14%;}
+.guessesheader-cell:nth-child(3) { width:15%;}
+.guessesheader-cell:nth-child(4) { width:15%;}
+.guessesheader-cell:nth-child(5) { width:9%;}
+.guessesheader-cell:nth-child(6) { width:9%;}
+.guessesheader-cell:nth-child(7) { width:17%;}
 
 
 
-.guess .text-block:nth-child(1) { width:30%;}		
-.guess .text-block:nth-child(2) { animation-delay:0.125s; width:20%;}
-.guess .text-block:nth-child(3) { animation-delay:0.25s; width:25%;}
-.guess .text-block:nth-child(4) { animation-delay:0.375s; width: 20%;}
-.guess .text-block:nth-child(5) { animation-delay:0.5s;width:10%;}
-.guess .text-block:nth-child(6) { animation-delay:0.65s;width:15%;}
-.guess .text-block:nth-child(7) { animation-delay:0.725s;width:20%;}
+.guess .text-block:nth-child(1) { width:20%;}		
+.guess .text-block:nth-child(2) { animation-delay:0.125s; width:14%;}
+.guess .text-block:nth-child(3) { animation-delay:0.25s; width:15%;}
+.guess .text-block:nth-child(4) { animation-delay:0.375s; width: 15%;}
+.guess .text-block:nth-child(5) { animation-delay:0.5s;width:9%;word-spacing: 1em;}
+.guess .text-block:nth-child(6) { animation-delay:0.65s;width:9%;word-spacing: 1em;}
+.guess .text-block:nth-child(7) { animation-delay:0.725s;width:17%;}
 
 .guesses {
-    width:100%;
+  width:100%;
 	display: block;
 	z-index:1;
 	font-family: Stratum2Medium;
 	background-color: rgb(54, 56, 54, 0.3);
-	padding-bottom: 1em;	
+	padding-bottom: 1em;
+  font-size: 1.6vh;	
 }
 
 
@@ -65,7 +68,6 @@
   margin-bottom: 0.3em;
   z-index:1;
   line-height: 1em;
-  font-size: 1.6vh;
 }
 
 .text-block {
@@ -88,11 +90,6 @@
   height:auto;
   width:auto;
 }
-
-.guess .text-block:nth-child(1) span {
-}
-
-
 
 
 .guess .text-block:nth-child(2n){

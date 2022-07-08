@@ -5,13 +5,73 @@
 @import url("mobileGuesses.css");
 @import url("mobileAutocomplete.css");
 
-@keyframes backgroundAnimation{
+@media only screen and (min-width: 600px){
+	.gametitle {
+		font-size: 4vw;
+		margin-top: 1vw;
+	}
+	
+	.top-bar {
+		font-size: 1.5vw;
+	}
+	
 
-}
+	.autocomplete {
+		width: 40%;
+		height: 1em;
+	}
 
-h1 {
-	font-family: Helvetica85;
-	color: #5d79ae;
+	input {
+		font-size: 1vw;
+	}
+
+	.autocomplete-items {
+		font-size: 1rem;
+		top: 2.2rem;
+	}
+
+	.guessesheader {
+		margin-top: 2%;
+		width: 80%;
+		margin-left:auto;
+		margin-right:auto;
+		font-size: 1.5vw;
+	}
+
+	.guesses {
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 1.5vw;
+	}
+
+	.guess {
+		height: 2em;
+		line-height: 100%;
+	}
+
+	.text-block img {
+		max-height: 2em;
+	}
+
+	.guessesheader-cell:nth-child(1) { width:20%;}		
+	.guessesheader-cell:nth-child(2) { width:14%;}
+	.guessesheader-cell:nth-child(3) { width:15%;}
+	.guessesheader-cell:nth-child(4) { width:10%;}
+	.guessesheader-cell:nth-child(5) { width:8.5%;}
+	.guessesheader-cell:nth-child(6) { width:8.5%;}
+	.guessesheader-cell:nth-child(7) { width:24%;}
+
+
+
+	.guess .text-block:nth-child(1) { width:20%;}		
+	.guess .text-block:nth-child(2) { animation-delay:0.125s; width:14%;}
+	.guess .text-block:nth-child(3) { animation-delay:0.25s; width:15%;}
+	.guess .text-block:nth-child(4) { animation-delay:0.375s; width: 10%;}
+	.guess .text-block:nth-child(5) { animation-delay:0.5s;width:8.5%;word-spacing: initial;}
+	.guess .text-block:nth-child(6) { animation-delay:0.65s;width:8.5%; word-spacing: initial;}
+	.guess .text-block:nth-child(7) { animation-delay:0.725s;width:24%;}
+
 }
 
 body{
@@ -22,15 +82,11 @@ body{
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-}
-
-#root {
 	height:100vh;
 	width:100vw;
-	overflow:hidden;
+	overflow: overlay;
+	margin: 0;
 }
-h1 {
-	text-align:center;
-}
+
 
 

@@ -69,7 +69,7 @@ const Guess = (props)=>{
     />
     <GuessBlock 
       text=
-      {(props.data.earnings/1000).toLocaleString('en-US', {style:'currency', currency:'USD', maximumFractionDigits: '0'}) +'k' + ((Math.abs(props.data.earnings-props.answer.earnings)<=50000 && props.data.earnings!==props.answer.earnings)? ((props.data.earnings>props.answer.earnings)? "\n▼" : "\n▲"): '')}
+      {(props.data.earnings/1000).toLocaleString('en-US', {style:'currency', currency:'USD', maximumFractionDigits: '0'}) +'k' + ((Math.abs(props.data.earnings-props.answer.earnings)<=50000 && props.data.earnings!==props.answer.earnings)? ((props.data.earnings>props.answer.earnings)? " ▼" : " ▲"): '')}
       style=
       {{
         filter: (Math.abs(props.data.earnings-props.answer.earnings)<=50000)? 'brightness(120%)' : null,
@@ -78,7 +78,7 @@ const Guess = (props)=>{
       }}
     />
     <GuessBlock 
-      text={props.data.age + ((Math.abs(props.data.age-props.answer.age)<=2 && props.data.age!==props.answer.age)? ((props.data.age>props.answer.age)? "\n▼" : "\n▲"): '')}
+      text={props.data.age + ((Math.abs(props.data.age-props.answer.age)<=2 && props.data.age!==props.answer.age)? ((props.data.age>props.answer.age)? " ▼" : " ▲"): '')}
       style=
       {{
         filter: (Math.abs(props.data.age-props.answer.age)<=2)? 'brightness(120%)' : null,
@@ -88,7 +88,7 @@ const Guess = (props)=>{
 
     />
     <GuessBlock 
-      text={props.data.rating  + ((Math.abs(props.data.rating-props.answer.rating)<=0.05 && props.data.rating!==props.answer.rating)? ((props.data.rating>props.answer.rating)? "\n▼" : "\n▲"): '')}
+      text={props.data.rating  + ((Math.abs(props.data.rating-props.answer.rating)<=0.05 && props.data.rating!==props.answer.rating)? ((props.data.rating>props.answer.rating)? " ▼" : " ▲"): '')}
       style=
       {{
         filter: (Math.abs(props.data.rating-props.answer.rating)<=0.05)? 'brightness(120%)' : null,
