@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/esportle_reactjs/static/css/main.5dd05ae3.css",
+    "main.css": "/esportle_reactjs/static/css/main.1b950486.css",
     "main.js": "/esportle_reactjs/static/js/main.69f55b0d.js",
+    "static/media/NotoSansDisplay-Medium.ttf": "/esportle_reactjs/static/media/NotoSansDisplay-Medium.f4664e7d038311210fa1.ttf",
     "static/media/Movistar Riders.png": "/esportle_reactjs/static/media/Movistar Riders.d703559a125deca0b196.png",
     "static/media/FaZe.png": "/esportle_reactjs/static/media/FaZe.f1686b878985d5f8db5e.png",
     "static/media/G2.png": "/esportle_reactjs/static/media/G2.d4670b09faa048f7953a.png",
@@ -37,11 +38,11 @@
     "static/media/Endpoint.png": "/esportle_reactjs/static/media/Endpoint.36648c85839239bc3e5d.png",
     "static/media/Cloud9.png": "/esportle_reactjs/static/media/Cloud9.ee233fab7d8f3881a4b6.png",
     "index.html": "/esportle_reactjs/index.html",
-    "main.5dd05ae3.css.map": "/esportle_reactjs/static/css/main.5dd05ae3.css.map",
+    "main.1b950486.css.map": "/esportle_reactjs/static/css/main.1b950486.css.map",
     "main.69f55b0d.js.map": "/esportle_reactjs/static/js/main.69f55b0d.js.map"
   },
   "entrypoints": [
-    "static/css/main.5dd05ae3.css",
+    "static/css/main.1b950486.css",
     "static/js/main.69f55b0d.js"
   ]
 }
