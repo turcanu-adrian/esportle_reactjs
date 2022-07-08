@@ -1,16 +1,7 @@
 @font-face {
 	font-family: Helvetica85;
 	src: url(NeueHelveticaBQ-Bold.otf); 
-}
-
-@font-face {
-	font-family: TungstenBold;
-	src: url(Tungsten-Bold.ttf);
-}
-
-@font-face {
-	font-family: AkiraExpanded;
-	src: url(AkiraExpanded.otf);
+	font-display: swap;
 }
 
 @font-face {
@@ -26,4 +17,10 @@
 @font-face {
 	font-family: Stratum2Medium;
 	src: url(stratum2medium.ttf);
+	font-display: swap;
+}
+
+@font-face {
+	font-family: NotoSans;
+	src: url(NotoSansDisplay-Medium.ttf);
 }

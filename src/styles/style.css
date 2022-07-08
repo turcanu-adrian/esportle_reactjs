@@ -1,6 +1,4 @@
 @import url("fonts.css");
-@import url("autocomplete.css");
-@import url("guesses.css");
 @import url("mobileStyle.css");
 @import url("mobileGuesses.css");
 @import url("mobileAutocomplete.css");
@@ -75,18 +73,14 @@
 
 
 	.gameovermodal {
+		max-width: 15em;
 		font-size: 2vw;
-		width: 15em;
-		height:15em;
-		margin-left:auto;
-		margin-right:auto;
 		text-align: center;
 	}
 	
 	.gameovermodal .modal-content{
-		margin-left:0;
-		margin-right:0;
-		font-family: Stratum2Medium;
+		font-size: 100%;
+		font-family: NotoSans;
 		color: white;
 		background: none;
 		opacity: 1;
@@ -96,8 +90,6 @@
 		font-family: Stratum2Bold;
 		position: relative;
 		font-size: 150%;
-		bottom: 0.5em;
-		left: 0.2em;
 	}
 	
 	

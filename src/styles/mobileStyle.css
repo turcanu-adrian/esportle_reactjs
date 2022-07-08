@@ -81,6 +81,8 @@
 	font-size: 200%;
 	font-family: Stratum2Bold;
 	position: relative;
+	bottom: 0.5em;
+	left: 0.2em;
 }
 
 .gameovermodal img{
