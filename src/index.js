@@ -15,7 +15,12 @@ const StatsButton = () =>{
   return (<>
       <span onClick={handleShow}>STATS</span>
       <Modal show={show} onHide={handleClose} centered dialogClassName="statsmodal">
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Body>
+        <p>GAMES PLAYED: {localStorage.gamesplayed}</p>
+        <p>GAMES WON: {localStorage.gameswon}</p>
+        <p>CURRENT WINSTREAK: {localStorage.currentStreak}</p>
+        <p>WINSTREAK RECORD: {localStorage.maxStreak}</p>
+        </Modal.Body>
       </Modal>
       </>
   );
@@ -29,8 +34,20 @@ const HelpButton = () =>{
 
   return (<>
       <span onClick={handleShow}>HELP</span>
-      <Modal show={show} onHide={handleClose} centered>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+      <Modal show={show} onHide={handleClose} centered dialogClassName='helpmodal'>
+        <Modal.Body>
+        <ul>
+          <li>You get EIGHT guesses, try any player from a top 30 team</li>
+          <li>The top 30 teams update weekly</li>
+          <li><span style={{backgroundColor: '#466571'}}>BLUE</span> in any column indicates a match</li>
+          <li><span style={{backgroundColor: 'rgb(108, 94, 40)'}}>YELLOW</span> in the TEAM column means the player the player has played for that team in the past, but not currently</li>
+          <li><span style={{backgroundColor: 'rgb(108, 94, 40)'}}>YELLOW</span> in the REGION column means the player is from that region</li>
+          <li><span style={{backgroundColor: 'rgb(108, 94, 40)'}}>YELLOW</span> in the COUNTRY column means the player is from that country </li>
+          <li><span style={{backgroundColor: 'rgb(108, 94, 40)'}}>YELLOW</span> in the EARNINGS column means the player has earned at most $50k less/more than that amount</li>
+          <li><span style={{backgroundColor: 'rgb(108, 94, 40)'}}>YELLOW</span> in the AGE column means the player is at most 2 years younger/older</li>
+          <li><span style={{backgroundColor: 'rgb(108, 94, 40)'}}>YELLOW</span> in the RATING column means the player's rating is at most 0.05 lower/higher</li>
+        </ul>
+        </Modal.Body>
       </Modal>
       </>
   );
@@ -169,9 +186,9 @@ class Game extends React.Component {
 // ========================================
 
 
-if (localStorage.version != '7'){
+if (localStorage.version != '8'){
   localStorage.clear();
-  localStorage.version=7;
+  localStorage.version=8;
 } 
 
 if (localStorage.length === 1){
@@ -181,7 +198,7 @@ if (localStorage.length === 1){
   localStorage.gameswon=0;
   localStorage.currentStreak=0;
   localStorage.maxStreak=0;
-  localStorage.version=7;
+  localStorage.version=8;
 }
 
 localStorage.modalShown=false;

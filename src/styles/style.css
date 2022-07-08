@@ -69,10 +69,14 @@
 	.guess .text-block:nth-child(6) { width:8.5%; word-spacing: initial;}
 	.guess .text-block:nth-child(7) { width:24%;}
 
-
 	.gameovermodal {
-		max-width: 15em;
 		font-size: 2vw;
+		max-width: 20em;
+	}
+
+	.statsmodal, .helpmodal {
+		font-size: 1.5vw;
+		max-width: 40em;
 	}
 
 }

@@ -59,10 +59,11 @@
 	border: 0.1em solid;
 	box-shadow: 0 0 0.5em black;		
 	background: linear-gradient(to right, #272e6f 50% , #f99d1c 50%);
+	z-index: 1;
 }
 
 
-.gameovermodal {
+.gameovermodal, .statsmodal{
 	width:80%;
 	height:50%;
 	margin-left:auto;
@@ -75,7 +76,7 @@
 	color: white;
 	background: none;
 	opacity: 1;
-	backdrop-filter: blur(15px);
+	backdrop-filter: blur(50px);
 }
 
 .gameovermodal img{
@@ -110,3 +111,22 @@
 	margin-bottom: 0;
 }
 
+
+.statsmodal .modal-content{
+	font-family: NotoSans;
+	color: white;
+	background: none;
+	opacity: 1;
+	backdrop-filter: blur(50px);
+}
+
+.helpmodal .modal-content, .modal-body{
+	height:50%;
+	margin-left:auto;
+	margin-right:auto;
+	font-family: NotoSans;
+	color: white;
+	background: none;
+	opacity: 1;
+	backdrop-filter: blur(50px);
+}
