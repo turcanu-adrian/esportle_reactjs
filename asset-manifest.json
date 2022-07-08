@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/esportle_reactjs/static/css/main.1b950486.css",
+    "main.css": "/esportle_reactjs/static/css/main.792c2a77.css",
     "main.js": "/esportle_reactjs/static/js/main.69f55b0d.js",
     "static/media/NotoSansDisplay-Medium.ttf": "/esportle_reactjs/static/media/NotoSansDisplay-Medium.f4664e7d038311210fa1.ttf",
     "static/media/Movistar Riders.png": "/esportle_reactjs/static/media/Movistar Riders.d703559a125deca0b196.png",
@@ -22,7 +22,6 @@
     "static/media/paiN.png": "/esportle_reactjs/static/media/paiN.3c654aa14c54a43c3e03.png",
     "static/media/OG.png": "/esportle_reactjs/static/media/OG.241b89750ce420bc6edc.png",
     "static/media/MOUZ.png": "/esportle_reactjs/static/media/MOUZ.67c0f5c5c5d6e40618db.png",
-    "static/media/Tungsten-Bold.ttf": "/esportle_reactjs/static/media/Tungsten-Bold.9d9c3df1b520ae9714c3.ttf",
     "static/media/forZe.png": "/esportle_reactjs/static/media/forZe.a892161f6af37a1c8978.png",
     "static/media/Outsiders.png": "/esportle_reactjs/static/media/Outsiders.0c01eae25ee1182ef891.png",
     "static/media/NIP.png": "/esportle_reactjs/static/media/NIP.1cfd55fb2a1fbab6e614.png",
@@ -32,17 +31,16 @@
     "static/media/Vitality.png": "/esportle_reactjs/static/media/Vitality.82af8a9902ce18596a11.png",
     "static/media/Astralis.png": "/esportle_reactjs/static/media/Astralis.bf8928d70c9f60d20673.png",
     "static/media/Finest.png": "/esportle_reactjs/static/media/Finest.6fa7c5c89af2fd041841.png",
-    "static/media/AkiraExpanded.otf": "/esportle_reactjs/static/media/AkiraExpanded.5198553380d9bb727554.otf",
     "static/media/FURIA.png": "/esportle_reactjs/static/media/FURIA.2abb8249d8457c4ba6ed.png",
     "static/media/Entropiq.png": "/esportle_reactjs/static/media/Entropiq.57a787537021435b0053.png",
     "static/media/Endpoint.png": "/esportle_reactjs/static/media/Endpoint.36648c85839239bc3e5d.png",
     "static/media/Cloud9.png": "/esportle_reactjs/static/media/Cloud9.ee233fab7d8f3881a4b6.png",
     "index.html": "/esportle_reactjs/index.html",
-    "main.1b950486.css.map": "/esportle_reactjs/static/css/main.1b950486.css.map",
+    "main.792c2a77.css.map": "/esportle_reactjs/static/css/main.792c2a77.css.map",
     "main.69f55b0d.js.map": "/esportle_reactjs/static/js/main.69f55b0d.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b950486.css",
+    "static/css/main.792c2a77.css",
     "static/js/main.69f55b0d.js"
   ]
 }
