@@ -186,9 +186,9 @@ class Game extends React.Component {
 // ========================================
 
 
-if (localStorage.version != '8'){
+if (localStorage.version != '9'){
   localStorage.clear();
-  localStorage.version=8;
+  localStorage.version=9;
 } 
 
 if (localStorage.length === 1){
@@ -198,7 +198,7 @@ if (localStorage.length === 1){
   localStorage.gameswon=0;
   localStorage.currentStreak=0;
   localStorage.maxStreak=0;
-  localStorage.version=8;
+  localStorage.version=9;
 }
 
 localStorage.modalShown=false;
