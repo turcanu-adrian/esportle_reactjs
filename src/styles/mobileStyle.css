@@ -91,7 +91,7 @@
 .gameovermodal .rightAnswer {
 	text-indent: 10px;
 	line-height: 1.5em;
-	width: 75%;
+	width: 70%;
 	margin-bottom: 0.1em;
 	text-align: justify;
 	margin-left: auto;
@@ -107,7 +107,7 @@
 
 .gameovermodal .rightAnswer p:nth-child(3){
 	font-family: NotoSansThin;
-	font-size: 80%;
+	font-size: 65%;
 	margin-bottom: 0;
 }
 
