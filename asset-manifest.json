@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/esportle_reactjs/static/css/main.d4859c8f.css",
+    "main.css": "/esportle_reactjs/static/css/main.c6ae45de.css",
     "main.js": "/esportle_reactjs/static/js/main.dd56d551.js",
     "static/media/NotoSans-Thin.ttf": "/esportle_reactjs/static/media/NotoSans-Thin.f8eb04149ef4682fef3d.ttf",
     "static/media/NotoSansDisplay-Medium.ttf": "/esportle_reactjs/static/media/NotoSansDisplay-Medium.f4664e7d038311210fa1.ttf",
@@ -37,11 +37,11 @@
     "static/media/Endpoint.png": "/esportle_reactjs/static/media/Endpoint.36648c85839239bc3e5d.png",
     "static/media/Cloud9.png": "/esportle_reactjs/static/media/Cloud9.ee233fab7d8f3881a4b6.png",
     "index.html": "/esportle_reactjs/index.html",
-    "main.d4859c8f.css.map": "/esportle_reactjs/static/css/main.d4859c8f.css.map",
+    "main.c6ae45de.css.map": "/esportle_reactjs/static/css/main.c6ae45de.css.map",
     "main.dd56d551.js.map": "/esportle_reactjs/static/js/main.dd56d551.js.map"
   },
   "entrypoints": [
-    "static/css/main.d4859c8f.css",
+    "static/css/main.c6ae45de.css",
     "static/js/main.dd56d551.js"
   ]
 }
