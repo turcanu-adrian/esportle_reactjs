@@ -98,22 +98,28 @@ async function shareScore(){
     }
   copyText +="\n";
 }
-if (navigator.clipboard){
-  navigator.clipboard.writeText(copyText);
-  alert("COPIED WITH NEW METHOD");
-} else {
-  var textArea = document.createElement("textarea");
-  textArea.value = copyText;
-  textArea.style.top = "0";
-  textArea.style.left = "0";
-  textArea.style.position = "fixed";
-  textArea.style.display = "none";
-  document.body.appendChild(textArea);
-  textArea.focus();
-  textArea.select();
-  document.execCommand('copy');
-  alert("COPIED WITH OLD METHOD");
-}
+navigator.permissions.query({ name: 'clipboard-write' })
+  .then (result => {
+    if (result.state === 'granted')
+    {
+      navigator.clipboard.writeText(copyText);
+      alert("COPIED WITH NEW METHOD");
+    }
+    else {
+      var textArea = document.createElement("textarea");
+      textArea.value = copyText;
+      textArea.style.top = "0";
+      textArea.style.left = "0";
+      textArea.style.position = "fixed";
+      textArea.style.display = "none";
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      document.execCommand('copy');
+      alert("COPIED WITH OLD METHOD");
+    }
+  }) 
+  
 }
 
 const TopBar = () => {
