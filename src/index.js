@@ -223,7 +223,7 @@ fetch('./players.json')
   .then (response=>response.text())
   .then (data => {
     const root = ReactDOM.createRoot(document.getElementById("root"));
-    root.render(<Game answer={parseInt(data)} players={playersdata} />);
+    root.render(<Game answer={parseInt(data)  } players={playersdata} />);
   })
 });
 

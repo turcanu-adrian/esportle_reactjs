@@ -1,5 +1,5 @@
 import React from 'react';
-
+import ReactImageFallback from "react-image-fallback";
 /* function importAll(r) {
   let images = {};
   r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
@@ -31,8 +31,9 @@ const GuessesHeader = () =>{
 const GuessBlock = (props) =>
 { 
   return <div style={props.style} className='text-block'>
-  <img src={props.img}/>
-  <span>{props.text}</span></div>
+  <ReactImageFallback src={props.img + '.svg'} fallbackImage={props.img + '.png'}  alt=''/>
+  <span>{props.text}</span>
+  </div>
  
 }
 
@@ -49,7 +50,7 @@ const Guess = (props)=>{
         color: (props.data.currentTeam === props.answer.currentTeam)? '#bde2fb' : null,
       }}
       text={'\n'+props.data.currentTeam} 
-      img={'./team-logos/' + props.data.currentTeam +'.svg'}
+      img={'./team-logos/' + props.data.currentTeam}
     />
     <GuessBlock 
       text={props.data.continent}
