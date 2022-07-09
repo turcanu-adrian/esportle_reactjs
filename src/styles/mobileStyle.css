@@ -64,7 +64,7 @@
 
 
 .gameovermodal, .statsmodal{
-	width:80%;
+	max-width:80%;
 	height:50%;
 	margin-left:auto;
 	margin-right:auto;
@@ -91,7 +91,7 @@
 .gameovermodal .rightAnswer {
 	text-indent: 10px;
 	line-height: 1.5em;
-	width: 70%;
+	width: 80%;
 	margin-bottom: 0.1em;
 	text-align: justify;
 	margin-left: auto;

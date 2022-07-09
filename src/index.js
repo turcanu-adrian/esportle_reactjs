@@ -197,10 +197,12 @@ class Game extends React.Component {
 
 // ========================================
 
+const date = new Date();
+const day =(date.getDate()*date.getMonth()*date.getDay())%151;
 
-if (localStorage.version != '11'){
+if (localStorage.version != '12'){
   localStorage.clear();
-  localStorage.version=11;
+  localStorage.version='12';
 } 
 
 if (localStorage.length === 1){
@@ -210,7 +212,13 @@ if (localStorage.length === 1){
   localStorage.gameswon=0;
   localStorage.currentStreak=0;
   localStorage.maxStreak=0;
-  localStorage.version=11;
+  localStorage.version='12';
+  localStorage.day = day.toString();
+} else if (localStorage.day.toString() != day.toString())
+{
+  localStorage.gameOver = false;
+  localStorage.guesses = JSON.stringify([]);
+  localStorage.day = day.toString();
 }
 
 localStorage.modalShown=false;
@@ -219,12 +227,9 @@ fetch('./players.json')
 .then(response=>response.text())
 .then(data=>{
   let playersdata = JSON.parse(data);
-  fetch('./win.txt')
-  .then (response=>response.text())
-  .then (data => {
-    const root = ReactDOM.createRoot(document.getElementById("root"));
-    root.render(<Game answer={parseInt(data)  } players={playersdata} />);
-  })
-});
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(<Game answer={day} players={playersdata} />);
+  });
+
 
 export default Game;
