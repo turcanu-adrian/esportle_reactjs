@@ -98,28 +98,20 @@ async function shareScore(){
     }
   copyText +="\n";
 }
-navigator.permissions.query({ name: 'clipboard-write' })
-  .then (result => {
-    if (result.state === 'granted')
-    {
-      navigator.clipboard.writeText(copyText);
-      alert("COPIED WITH NEW METHOD");
-    }
-    else {
-      var textArea = document.createElement("textarea");
-      textArea.value = copyText;
-      textArea.style.top = "0";
-      textArea.style.left = "0";
-      textArea.style.position = "fixed";
-      textArea.style.display = "none";
-      document.body.appendChild(textArea);
-      textArea.focus();
-      textArea.select();
-      document.execCommand('copy');
-      alert("COPIED WITH OLD METHOD");
-    }
-  }) 
-  
+
+
+  var textArea = document.createElement("textarea");
+  textArea.value = copyText;
+  textArea.style.top = "0";
+  textArea.style.left = "0";
+  textArea.style.position = "fixed";
+  textArea.style.opacity = '0';
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+  document.execCommand('copy');
+  document.body.removeChild(textArea);
+  alert("RESULT COPIED TO CLIPBOARD");
 }
 
 const TopBar = () => {
@@ -206,9 +198,9 @@ class Game extends React.Component {
 // ========================================
 
 
-if (localStorage.version != '9'){
+if (localStorage.version != '10'){
   localStorage.clear();
-  localStorage.version=9;
+  localStorage.version=10;
 } 
 
 if (localStorage.length === 1){
@@ -218,7 +210,7 @@ if (localStorage.length === 1){
   localStorage.gameswon=0;
   localStorage.currentStreak=0;
   localStorage.maxStreak=0;
-  localStorage.version=9;
+  localStorage.version=10;
 }
 
 localStorage.modalShown=false;
