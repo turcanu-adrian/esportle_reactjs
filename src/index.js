@@ -215,11 +215,11 @@ if (localStorage.length === 1){
 
 localStorage.modalShown=false;
 console.log("FETCHING PLAYERS DATA ... ");
-fetch('https://turcanu-adrian.github.io/esportle_reactjs/players.json')
+fetch('./players.json')
 .then(response=>response.text())
 .then(data=>{
   let playersdata = JSON.parse(data);
-  fetch('https://turcanu-adrian.github.io/esportle_reactjs/win.txt')
+  fetch('./win.txt')
   .then (response=>response.text())
   .then (data => {
     const root = ReactDOM.createRoot(document.getElementById("root"));
