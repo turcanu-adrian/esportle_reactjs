@@ -1,31 +1,27 @@
 @font-face {
 	font-family: Helvetica85;
-	src: url(NeueHelveticaBQ-Bold.otf); 
-	font-display: swap;
+	src: url('./NeueHelveticaBQ-Bold.otf'); 
 }
 
-@font-face {
-	font-family: CSRegular;
-	src: url(cs_regular.ttf);
-}
+
 
 @font-face {
 	font-family: Stratum2Bold;
-	src: url(stratum2bold.ttf);
+	src: url('./stratum2bold.ttf');
 }
 
 @font-face {
 	font-family: Stratum2Medium;
-	src: url(stratum2medium.ttf);
+	src: url('./stratum2medium.ttf');
 	font-display: swap;
 }
 
 @font-face {
 	font-family: NotoSans;
-	src: url(NotoSansDisplay-Medium.ttf);
+	src: url('./NotoSansDisplay-Medium.ttf');
 }
 
 @font-face {
 	font-family: NotoSansThin;
-	src: url(NotoSans-Thin.ttf);
+	src: url('./NotoSans-Thin.ttf');
 }

@@ -7,7 +7,6 @@
 	flex-wrap:nowrap;
 	justify-content: center;	
 	align-items: center;
-	font-family: Helvetica85;
 	font-size: 6vw;
 	letter-spacing: 0.2em;
 	color: white;
@@ -91,7 +90,7 @@
 .gameovermodal .rightAnswer {
 	text-indent: 10px;
 	line-height: 1.5em;
-	width: 80%;
+	width: 100%;
 	margin-bottom: 0.1em;
 	text-align: justify;
 	margin-left: auto;
