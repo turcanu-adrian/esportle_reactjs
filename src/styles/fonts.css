@@ -1,6 +1,7 @@
 @font-face {
 	font-family: Helvetica85;
 	src: url('./NeueHelveticaBQ-Bold.otf'); 
+	font-display: swap;
 }
 
 
