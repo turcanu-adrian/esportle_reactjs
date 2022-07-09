@@ -67,24 +67,7 @@ const GameOver = (props) =>{
         setShow(true);
   },[localStorage.gameOver]);
 
-  const shareScore = () =>{
-    let copyText = 'ESPORTLE ' + JSON.parse(localStorage.guesses).length + '/8' + '\n\n';
-    for (let i=0;i<JSON.parse(localStorage.guesses).length;i++)
-	  {
-		for (let j=0; j<6;j++)
-		{
-			if (document.getElementsByClassName("guess")[i].getElementsByClassName("text-block")[j].style.backgroundColor === 'rgb(70, 101, 113)')
-				copyText += "🟦";
-			else if (document.getElementsByClassName("guess")[i].getElementsByClassName("text-block")[j].style.backgroundColor === "rgb(108, 94, 40)")
-				copyText += "🟧";
-			else
-				copyText+= "⬛";
-		  }
-		copyText +="\n";
-	}
-  navigator.clipboard.writeText(copyText); 
-  alert("RESULT COPIED TO CLIPBOARD");
-  }
+ 
 
   return (<>
       <Modal show={show} onHide={handleClose} centered dialogClassName="gameovermodal">
@@ -100,7 +83,38 @@ const GameOver = (props) =>{
   );
 }
 
-
+async function shareScore(){
+  let copyText = 'ESPORTLE ' + JSON.parse(localStorage.guesses).length + '/8' + '\n\n';
+  for (let i=0;i<JSON.parse(localStorage.guesses).length;i++)
+  {
+  for (let j=0; j<6;j++)
+  {
+    if (document.getElementsByClassName("guess")[i].getElementsByClassName("text-block")[j].style.backgroundColor === 'rgb(70, 101, 113)')
+      copyText += "🟦";
+    else if (document.getElementsByClassName("guess")[i].getElementsByClassName("text-block")[j].style.backgroundColor === "rgb(108, 94, 40)")
+      copyText += "🟧";
+    else
+      copyText+= "⬛";
+    }
+  copyText +="\n";
+}
+if (navigator.clipboard){
+  navigator.clipboard.writeText(copyText);
+  alert("COPIED WITH NEW METHOD");
+} else {
+  var textArea = document.createElement("textarea");
+  textArea.value = copyText;
+  textArea.style.top = "0";
+  textArea.style.left = "0";
+  textArea.style.position = "fixed";
+  textArea.style.display = "none";
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+  document.execCommand('copy');
+  alert("COPIED WITH OLD METHOD");
+}
+}
 
 const TopBar = () => {
   return (
