@@ -85,7 +85,7 @@
   z-index:1;
 }
 
-.text-block img { 
+.text-block object { 
   max-height:2.5em;
   height:auto;
   width:auto;

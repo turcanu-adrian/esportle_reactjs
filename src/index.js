@@ -198,9 +198,9 @@ class Game extends React.Component {
 // ========================================
 
 
-if (localStorage.version != '10'){
+if (localStorage.version != '11'){
   localStorage.clear();
-  localStorage.version=10;
+  localStorage.version=11;
 } 
 
 if (localStorage.length === 1){
@@ -210,7 +210,7 @@ if (localStorage.length === 1){
   localStorage.gameswon=0;
   localStorage.currentStreak=0;
   localStorage.maxStreak=0;
-  localStorage.version=10;
+  localStorage.version=11;
 }
 
 localStorage.modalShown=false;
@@ -223,7 +223,7 @@ fetch('./players.json')
   .then (response=>response.text())
   .then (data => {
     const root = ReactDOM.createRoot(document.getElementById("root"));
-    root.render(<Game answer={data} players={playersdata} />);
+    root.render(<Game answer={parseInt(data)} players={playersdata} />);
   })
 });
 

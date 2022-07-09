@@ -1,13 +1,13 @@
 import React from 'react';
 
-function importAll(r) {
+/* function importAll(r) {
   let images = {};
   r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
   return images;
 }
 
-const team_logos = importAll(require.context('./team-logos', false, /\.(png|jpe?g|svg)$/));
-
+const team_logos = importAll(require.context('https://esportles.com/team-logos/', false, /\.(png|jpe?g|svg)$/));
+ */
 
 const GuessesHeaderCell = (props) =>{
   return (
@@ -30,7 +30,9 @@ const GuessesHeader = () =>{
 
 const GuessBlock = (props) =>
 { 
-  return <div style={props.style} className='text-block'><img src={props.img} alt=''/><span>{props.text}</span></div>
+  return <div style={props.style} className='text-block'>
+  <img src={props.img}/>
+  <span>{props.text}</span></div>
  
 }
 
@@ -47,7 +49,7 @@ const Guess = (props)=>{
         color: (props.data.currentTeam === props.answer.currentTeam)? '#bde2fb' : null,
       }}
       text={'\n'+props.data.currentTeam} 
-      img={team_logos[props.data.currentTeam + '.png']}
+      img={'./team-logos/' + props.data.currentTeam +'.svg'}
     />
     <GuessBlock 
       text={props.data.continent}
