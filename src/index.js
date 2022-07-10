@@ -56,10 +56,10 @@ const HelpButton = () =>{
 const GameOver = (props) =>{
   const [show, setShow] = useState(localStorage.gameOver === 'true');
   let modalShown=false;
+
   const handleClose = () => {
       modalShown=true;
       setShow(false);
-      
   }
 
   useEffect(()=>{ 
@@ -67,6 +67,24 @@ const GameOver = (props) =>{
         setShow(true);
   },[localStorage.gameOver]);
 
+
+  function shareScore(){
+    let copyText = "ESPORTLE" + JSON.parse(localStorage.guesses).length.toString() + "/8\n\n"; 
+    for (let i=0;i<JSON.parse(localStorage.guesses).length;i++)
+    {
+    for (let j=0; j<6;j++)
+    {
+      if (document.getElementsByClassName("guess")[i].getElementsByClassName("text-block")[j].style.backgroundColor === "rgb(70, 101, 113)")
+        copyText += "🟦";
+      else if (document.getElementsByClassName("guess")[i].getElementsByClassName("text-block")[j].style.backgroundColor === "rgb(108, 94, 40)")
+        copyText += "🟧";
+      else
+        copyText+= "⬛";
+      }
+    copyText +="\n";
+  }
+    return copyText;
+  }
  
 
   return (<>
@@ -76,43 +94,14 @@ const GameOver = (props) =>{
         <div className="rightAnswer"><img src={'https://prosettings.net/acd-cgi/img/v1/wp-content/uploads/' + props.answer.name.toLowerCase() + '.png'} alt='avatar'></img><p>{props.answer.name}</p><p>  was the answer</p></div>
         <p>{(localStorage.currentStreak === '0')? 'GL HF TOMORROW!' : 'YOU SOLVED IT IN ' + JSON.parse(localStorage.guesses).length + ' GUESS' 
         + (JSON.parse(localStorage.guesses).length===1? '!' : 'ES!')}</p>
-        <button onClick={shareScore}>SHARE MY RESULT!</button>
+        <button onClick={() => {let copyText = shareScore(); navigator.clipboard.writeText(copyText)}}>SHARE MY RESULT!</button>
         </Modal.Body>
       </Modal>
       </>
   );
 }
 
-async function shareScore(){
-  let copyText = 'ESPORTLE ' + JSON.parse(localStorage.guesses).length + '/8' + '\n\n';
-  for (let i=0;i<JSON.parse(localStorage.guesses).length;i++)
-  {
-  for (let j=0; j<6;j++)
-  {
-    if (document.getElementsByClassName("guess")[i].getElementsByClassName("text-block")[j].style.backgroundColor === 'rgb(70, 101, 113)')
-      copyText += "🟦";
-    else if (document.getElementsByClassName("guess")[i].getElementsByClassName("text-block")[j].style.backgroundColor === "rgb(108, 94, 40)")
-      copyText += "🟧";
-    else
-      copyText+= "⬛";
-    }
-  copyText +="\n";
-}
 
-
-  var textArea = document.createElement("textarea");
-  textArea.value = copyText;
-  textArea.style.top = "0";
-  textArea.style.left = "0";
-  textArea.style.position = "fixed";
-  textArea.style.opacity = '0';
-  document.body.appendChild(textArea);
-  textArea.focus();
-  textArea.select();
-  document.execCommand('copy');
-  document.body.removeChild(textArea);
-  alert("RESULT COPIED TO CLIPBOARD");
-}
 
 const TopBar = () => {
   return (
@@ -200,7 +189,7 @@ class Game extends React.Component {
 const date = new Date();
 const day =(date.getDate()*date.getMonth()*date.getDay())%151;
 
-if (localStorage.version != '12'){
+if (localStorage.version !== '12'){
   localStorage.clear();
   localStorage.version='12';
 } 
@@ -214,7 +203,7 @@ if (localStorage.length === 1){
   localStorage.maxStreak=0;
   localStorage.version='12';
   localStorage.day = day.toString();
-} else if (localStorage.day.toString() != day.toString())
+} else if (localStorage.day.toString() !== day.toString())
 {
   localStorage.gameOver = false;
   localStorage.guesses = JSON.stringify([]);
