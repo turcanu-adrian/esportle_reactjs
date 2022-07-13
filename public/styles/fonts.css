@@ -1,6 +1,6 @@
 @font-face {
 	font-family: Helvetica85;
-	src: url('./NeueHelveticaBQ-Bold.otf'); 
+	src: url('/fonts/NeueHelveticaBQ-Bold.otf'); 
 	font-display: swap;
 }
 
@@ -8,21 +8,21 @@
 
 @font-face {
 	font-family: Stratum2Bold;
-	src: url('./stratum2bold.ttf');
+	src: url('/fonts/stratum2bold.ttf');
 }
 
 @font-face {
 	font-family: Stratum2Medium;
-	src: url('./stratum2medium.ttf');
+	src: url('/fonts/stratum2medium.ttf');
 	font-display: swap;
 }
 
 @font-face {
 	font-family: NotoSans;
-	src: url('./NotoSansDisplay-Medium.ttf');
+	src: url('/fonts/NotoSansDisplay-Medium.ttf');
 }
 
 @font-face {
 	font-family: NotoSansThin;
-	src: url('./NotoSans-Thin.ttf');
+	src: url('/fonts/NotoSans-Thin.ttf');
 }

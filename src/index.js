@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ReactDOM from 'react-dom/client';
 import Autocomplete from './Autocomplete.js';
 import {Guesses, GuessesHeader}  from './Guesses.js';
-import './styles/style.css';
+//import './styles/style.css';
 
 const StatsButton = () =>{
   const [show, setShow] = useState(false);
