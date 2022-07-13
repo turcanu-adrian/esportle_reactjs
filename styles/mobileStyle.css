@@ -1,0 +1,131 @@
+
+.top-bar {	
+	display:flex;
+	width: 100%;
+	height: 1.5em;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	justify-content: center;	
+	align-items: center;
+	font-size: 6vw;
+	letter-spacing: 0.2em;
+	color: white;
+	background: linear-gradient(to right, #2a333b 10%, #404950 50%, #2a333b 90%);
+	border-top: outset 0.1em rgb(76,85,93, 0.3);
+	border-bottom: outset 0.1em rgba(76,85,93, 0.3);
+	overflow: hidden;
+}
+
+.top-bar span{
+	cursor: pointer;
+	padding-left:1em;
+	padding-right:1em;
+	font-family: Stratum2Medium;
+	border-left: solid 0.1em #272c2f;
+}
+
+.top-bar span:nth-child(1){
+	border-right: none;
+}
+
+.top-bar span:nth-child(4)
+{
+	border-right: solid 0.1em #272c2f;
+}
+
+.maingame {
+	font-size: 1vh;
+    padding-top: 2.5em;
+	backdrop-filter: blur(5px) brightness(70%);
+	width:100%;
+	height:95.4vh;
+	overflow: hidden;
+}
+
+
+.gametitle {
+	width: 7em;
+    margin-left:auto;
+    margin-right:auto;
+	display: block;
+	color:white;
+	font-size: 10vw;
+	text-align: center;
+	font-family: Helvetica85;
+    margin-bottom: 0.5em;
+	border-radius: 1em;
+	letter-spacing: 0.1em;	
+	border: 0.1em solid;
+	box-shadow: 0 0 0.5em black;		
+	background: linear-gradient(to right, #272e6f 50% , #f99d1c 50%);
+	z-index: 1;
+}
+
+
+.gameovermodal, .statsmodal{
+	max-width:80%;
+	height:50%;
+	margin-left:auto;
+	margin-right:auto;
+	text-align: center;
+}
+
+.gameovermodal .modal-content{
+	font-family: NotoSans;
+	color: white;
+	background: none;
+	opacity: 1;
+	backdrop-filter: blur(50px);
+}
+
+.gameovermodal img{
+	max-height: 3em;
+	width:auto;
+	float: left;
+	background-color: white;
+	border-left: 0.5em solid green;
+	box-shadow: 0 0 0.5em black;
+}
+
+.gameovermodal .rightAnswer {
+	text-indent: 10px;
+	line-height: 1.5em;
+	width: 100%;
+	margin-bottom: 0.1em;
+	text-align: justify;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 100%;
+	font-family: Stratum2Bold;
+}
+
+.gameovermodal .rightAnswer p:nth-child(2){
+	margin-bottom: 0;
+	text-shadow: 0 0 0.5em black;
+}
+
+.gameovermodal .rightAnswer p:nth-child(3){
+	font-family: NotoSansThin;
+	font-size: 65%;
+	margin-bottom: 0;
+}
+
+
+.statsmodal .modal-content{
+	font-family: NotoSans;
+	color: white;
+	background: none;
+	opacity: 1;
+	backdrop-filter: blur(50px);
+}
+
+.helpmodal .modal-content, .modal-body{
+	height:50%;
+	margin-left:auto;
+	margin-right:auto;
+	font-family: NotoSans;
+	color: white;
+	background: none;
+	opacity: 1;
+	backdrop-filter: blur(50px);
+}
