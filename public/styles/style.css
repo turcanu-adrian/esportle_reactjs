@@ -76,13 +76,9 @@
 	}
 
 	.gameovermodal .rightAnswer{
-		width: 100%;
 	}
 
-	.statsmodal, .helpmodal {
-		font-size: 1.5vw;
-		max-width: 40em;
-	}
+
 
 }
 

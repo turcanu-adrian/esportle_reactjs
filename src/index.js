@@ -35,12 +35,12 @@ const HelpButton = () =>{
   return (<>
       <span onClick={handleShow}>HELP</span>
       <Modal show={show} onHide={handleClose} centered dialogClassName='helpmodal'>
-        <Modal.Body>
+        <Modal.Body className="modal-body">
         <ul>
           <li>You get EIGHT guesses, try any player from a top 30 team</li>
           <li>The top 30 teams update weekly</li>
           <li><span style={{backgroundColor: '#466571'}}>BLUE</span> in any column indicates a match</li>
-          <li><span style={{backgroundColor: 'rgb(108, 94, 40)'}}>YELLOW</span> in the TEAM column means the player the player has played for that team in the past, but not currently</li>
+          <li><span style={{backgroundColor: 'rgb(108, 94, 40)'}}>YELLOW</span> in the TEAM column means the player the player has played for that team in the past</li>
           <li><span style={{backgroundColor: 'rgb(108, 94, 40)'}}>YELLOW</span> in the REGION column means the player is from that region</li>
           <li><span style={{backgroundColor: 'rgb(108, 94, 40)'}}>YELLOW</span> in the COUNTRY column means the player is from that country </li>
           <li><span style={{backgroundColor: 'rgb(108, 94, 40)'}}>YELLOW</span> in the EARNINGS column means the player has earned at most $50k less/more than that amount</li>
