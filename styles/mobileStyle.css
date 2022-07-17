@@ -89,8 +89,8 @@
 
 .gameovermodal .rightAnswer {
 	text-indent: 10px;
+	width: 10em;
 	line-height: 1.5em;
-	width: 100%;
 	margin-bottom: 0.1em;
 	text-align: justify;
 	margin-left: auto;
@@ -119,13 +119,24 @@
 	backdrop-filter: blur(50px);
 }
 
-.helpmodal .modal-content, .modal-body{
-	height:50%;
-	margin-left:auto;
-	margin-right:auto;
+.helpmodal .modal-content{
 	font-family: NotoSans;
 	color: white;
 	background: none;
 	opacity: 1;
 	backdrop-filter: blur(50px);
+}
+
+.modal-dialog.helpmodal.modal-dialog-centered {
+	max-width: 52em;
+}
+
+.modal-dialog.gameovermodal.modal-dialog-centered{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.modal-dialog.statsmodal.modal-dialog-centered{
+	margin-left: auto;
+	margin-right: auto;
 }
