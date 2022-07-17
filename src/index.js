@@ -187,7 +187,7 @@ class Game extends React.Component {
 // ========================================
 
 const date = new Date();
-const day =(date.getDate()*date.getMonth()*date.getDay())%151;
+const day =(date.getDate()*date.getMonth())%151;
 
 if (localStorage.version !== '12'){
   localStorage.clear();
