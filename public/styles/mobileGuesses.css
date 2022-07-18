@@ -7,10 +7,10 @@
 .guessesheader {
 	display: flex;
 	width:100%;
-    margin-top:20%;
+  margin-top: 2rem;
 	font-family: Stratum2Medium;
-	font-size: 1.4vh;
-	background-color: rgb(54, 56, 54, 0.3);
+	font-size: 3vw;
+	background-color: rgb(54, 56, 54, 0.5);
 	color: #a2a2a2;
     justify-content:center;
     align-items:center;
@@ -43,8 +43,8 @@
 .guess .text-block:nth-child(2) { animation-delay:0.125s; width:14%;}
 .guess .text-block:nth-child(3) { animation-delay:0.25s; width:15%;}
 .guess .text-block:nth-child(4) { animation-delay:0.375s; width: 15%;}
-.guess .text-block:nth-child(5) { animation-delay:0.5s;width:9%;word-spacing: 1em;}
-.guess .text-block:nth-child(6) { animation-delay:0.65s;width:9%;word-spacing: 1em;}
+.guess .text-block:nth-child(5) { animation-delay:0.5s;width:9%;}
+.guess .text-block:nth-child(6) { animation-delay:0.65s;width:9%;}
 .guess .text-block:nth-child(7) { animation-delay:0.725s;width:17%;}
 
 .guesses {
@@ -52,11 +52,10 @@
 	display: block;
 	z-index:1;
 	font-family: Stratum2Medium;
-	background-color: rgb(54, 56, 54, 0.3);
+	background-color: rgb(54, 56, 54, 0.5);
 	padding-bottom: 1em;
-  font-size: 1.6vh;	
+  font-size: 3vw;	
 }
-
 
 .guess {
   display: flex;
@@ -83,6 +82,7 @@
   animation-duration: 1s;
   animation-fill-mode: forwards;
   z-index:1;
+  word-spacing: 9999px;
 }
 
 .text-block img { 

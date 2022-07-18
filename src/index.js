@@ -189,9 +189,9 @@ class Game extends React.Component {
 const date = new Date();
 const day =(date.getDate()*date.getMonth())%151;
 
-if (localStorage.version !== '12'){
+if (localStorage.version !== '13'){
   localStorage.clear();
-  localStorage.version='12';
+  localStorage.version='13';
 } 
 
 if (localStorage.length === 1){
@@ -201,7 +201,7 @@ if (localStorage.length === 1){
   localStorage.gameswon=0;
   localStorage.currentStreak=0;
   localStorage.maxStreak=0;
-  localStorage.version='12';
+  localStorage.version='13';
   localStorage.day = day.toString();
 } else if (localStorage.day.toString() !== day.toString())
 {

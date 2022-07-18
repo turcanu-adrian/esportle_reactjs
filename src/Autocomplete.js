@@ -19,7 +19,7 @@ class Autocomplete extends React.Component {
     
         const filteredSuggestions = suggestions.filter(
             suggestion =>
-            (suggestion.toLowerCase().indexOf(userInput.toLowerCase()) > -1)  && (!JSON.parse(localStorage.guesses).includes(suggestion))
+            (suggestion.split('"')[1].toLowerCase().indexOf(userInput.toLowerCase()) > -1)  && (!JSON.parse(localStorage.guesses).includes(suggestion))
         );
     
         this.setState({
@@ -124,6 +124,7 @@ class Autocomplete extends React.Component {
                 value={userInput}
                 id={"inputbox"}
                 disabled={(localStorage.gameOver==='true')? true : false}
+                autocomplete="off"
               />
               {suggestionsListComponent}
             </Fragment>

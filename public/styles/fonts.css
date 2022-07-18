@@ -4,8 +4,6 @@
 	font-display: swap;
 }
 
-
-
 @font-face {
 	font-family: Stratum2Bold;
 	src: url('/fonts/stratum2bold.ttf');
@@ -25,4 +23,9 @@
 @font-face {
 	font-family: NotoSansThin;
 	src: url('/fonts/NotoSans-Thin.ttf');
+}
+
+@font-face {
+	font-family: LucidaConsole;
+	src: Url('/fonts/LucidaConsole.ttf');
 }
