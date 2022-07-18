@@ -24,11 +24,10 @@
 
 	.autocomplete {
 		width: 40%;
-		height: 2em;
+		height: 3em;
 	}
 
 	.autocomplete-items{
-		top: 1.5em;
 	}
 
 	

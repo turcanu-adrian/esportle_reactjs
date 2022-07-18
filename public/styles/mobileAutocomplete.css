@@ -6,13 +6,15 @@
     margin-left:auto;
     margin-right:auto;
     width:90%;
-    height: 5em;
+    height: 6em;
     color: white;
     font-family: LucidaConsole;
     background-color: white;
 
 		background-color: #3e3e3e;
-		border: solid 1px white;
+		border: solid 5px #a2a2a2;
+    border-radius: 5px;
+    box-shadow: 0 0 0.1em black;
   }
   
 
@@ -23,6 +25,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    height: 60%;
   }
 
   input {
@@ -38,7 +41,6 @@
     font-family: LucidaConsole;
     background-color: #3e3e3e;
     width: 95%;
-    height: 60%;
     font-size: 3vw;
     letter-spacing: -1px;
   }
@@ -50,13 +52,13 @@
 
   .autocomplete-items {
     font-size: 3vw;
-    width: 95%;
+    width: 20em;
+    max-width: 90%;
     position: absolute;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: 2.5%;
     z-index: 6;
     /*position the autocomplete items to be the same width as the container:*/
-    top: 2.5em;
+    top: 80%;
     left: 0;
     right: 0;
     letter-spacing: -1px;
