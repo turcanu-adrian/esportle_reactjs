@@ -69,7 +69,7 @@ const GameOver = (props) =>{
 
 
   function shareScore(){
-    let copyText = "ESPORTLE" + JSON.parse(localStorage.guesses).length.toString() + "/8\n\n"; 
+    let copyText = "ESPORTLE " + JSON.parse(localStorage.guesses).length.toString() + "/8\n\n"; 
     for (let i=0;i<JSON.parse(localStorage.guesses).length;i++)
     {
     for (let j=0; j<6;j++)
