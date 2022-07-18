@@ -4,51 +4,58 @@
 @import url("mobileGuesses.css");
 @import url("mobileAutocomplete.css");
 
-@media only screen and (min-width: 600px){
+@media only screen and (min-width: 800px){
 	.maingame {
-		padding-top: 4vh;
+		padding-top: 2em;
+		font-size: 1.2em;
+		padding-left: auto;
+		padding-right: auto;
 	}
+
 	.gametitle {
-		font-size: 3vw;
+		font-size: 4em;
+		width: 7em;
 	}
 	
 	.top-bar {
-		font-size: 3vh;
+		font-size: 2em;
 	}
 	
 
 	.autocomplete {
 		width: 40%;
-		height: 1em;
+		height: 2em;
 	}
 
-	input {
-		font-size: 0.5vh;
+	.autocomplete-items{
+		top: 1.5em;
 	}
+
+	
 
 	input[type=text]{
 		font-size: 1rem;
-		appearance: none;
 	}
 
 	.autocomplete-items {
 		font-size: 1rem;
-		top: 2rem;
 	}
 
 	.guessesheader {
+		min-width: 40em;
 		margin-top: 2%;
-		width: 50%;
+		width: 70%;
 		margin-left:auto;
 		margin-right:auto;
-		font-size: 1vw;
+		font-size: 1em;
 	}
 
 	.guesses {
-		width: 50%;
+		min-width: 40em;
+		width: 70%;
 		margin-left: auto;
 		margin-right: auto;
-		font-size: 1vw;
+		font-size: 1em;
 	}
 
 	.guess {
@@ -97,7 +104,7 @@ body{
 	background-size: cover;
 	height:100vh;
 	width:100vw;
-	overflow: overlay;
+	overflow: hidden;
 	margin: 0;
 }
 
