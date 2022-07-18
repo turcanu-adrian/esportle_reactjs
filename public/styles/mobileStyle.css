@@ -34,12 +34,11 @@
 }
 
 .maingame {
-	font-size: 1vh;
+	font-size: 2vw;
     padding-top: 4vw;
 	backdrop-filter: blur(5px) brightness(70%);
-	width:100%;
-	height:95.4vh;
-	overflow: hidden;
+	height:95.5vh;
+	overflow-y: hidden;
 }
 
 
