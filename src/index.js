@@ -75,11 +75,11 @@ const GameOver = (props) =>{
     for (let j=0; j<6;j++)
     {
       if (document.getElementsByClassName("guess")[i].getElementsByClassName("text-block")[j].style.backgroundColor === "rgb(70, 101, 113)")
-        copyText += "🟦";
+        copyText += "??";
       else if (document.getElementsByClassName("guess")[i].getElementsByClassName("text-block")[j].style.backgroundColor === "rgb(108, 94, 40)")
-        copyText += "🟧";
+        copyText += "??";
       else
-        copyText+= "⬛";
+        copyText+= "?";
       }
     copyText +="\n";
   }
@@ -189,9 +189,9 @@ class Game extends React.Component {
 const date = new Date();
 const day =(date.getDate()*date.getMonth())%151;
 
-if (localStorage.version !== '2'){
+if (localStorage.version !== '3'){
   localStorage.clear();
-  localStorage.version='2';
+  localStorage.version='3';
 } 
 
 if (localStorage.length === 1){
@@ -201,7 +201,7 @@ if (localStorage.length === 1){
   localStorage.gameswon=0;
   localStorage.currentStreak=0;
   localStorage.maxStreak=0;
-  localStorage.version='2';
+  localStorage.version='3';
   localStorage.day = day.toString();
 } else if (localStorage.day.toString() !== day.toString())
 {
