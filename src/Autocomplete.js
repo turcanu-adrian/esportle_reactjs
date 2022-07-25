@@ -124,7 +124,7 @@ class Autocomplete extends React.Component {
                 value={userInput}
                 id={"inputbox"}
                 disabled={(localStorage.gameOver==='true')? true : false}
-                autocomplete="off"
+                autoComplete="off"
               />
               {suggestionsListComponent}
             </Fragment>

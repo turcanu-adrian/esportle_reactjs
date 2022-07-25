@@ -108,7 +108,7 @@ const TopBar = () => {
     <div className='top-bar'>
     <ImageLink 
     href={"https://discordapp.com/users/140721278695768064/"}
-    src={"https://upload.wikimedia.org/wikipedia/commons/9/9f/Discord_icon.svg"}
+    src={"./discord.svg"}
     alt={"discord"}
     style={{
       maxHeight:'1em', 
@@ -187,7 +187,7 @@ class Game extends React.Component {
 // ========================================
 
 const date = new Date();
-const day =(date.getDate()*date.getMonth())%151;
+var day =(date.getDate()*date.getMonth());
 
 if (localStorage.version !== '3'){
   localStorage.clear();
@@ -216,6 +216,11 @@ fetch('./players.json')
 .then(response=>response.text())
 .then(data=>{
   let playersdata = JSON.parse(data);
+  console.log(playersdata.length);
+  day = day%playersdata.length;
+  console.log("day is " + day);
+  console.log("player of day is " + playersdata[day]);
+
   const root = ReactDOM.createRoot(document.getElementById("root"));
   root.render(<Game answer={day} players={playersdata} />);
   });
