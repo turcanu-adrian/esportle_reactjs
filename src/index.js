@@ -216,10 +216,7 @@ fetch('./players.json')
 .then(response=>response.text())
 .then(data=>{
   let playersdata = JSON.parse(data);
-  console.log(playersdata.length);
   day = day%playersdata.length;
-  console.log("day is " + day);
-  console.log("player of day is " + playersdata[day]);
 
   const root = ReactDOM.createRoot(document.getElementById("root"));
   root.render(<Game answer={day} players={playersdata} />);
